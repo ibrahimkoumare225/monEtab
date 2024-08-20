@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Mon Application</title>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue sur Mon Application</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#" th:href="@{/}">Accueil</a></li>
+        <li><a href="#" th:href="@{/about}">À propos</a></li>
+    </ul>
+</nav>
+
+<!-- Section modifiable -->
+<div layout:fragment="content">
+    <!-- Ce contenu sera remplacé par le contenu des pages spécifiques -->
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="/css/homePage_css.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Mon Etab</h2>
+            <hr>
+        </div>
+        <ul class="menu">
+            <li>
+                <li><a href="#" th:href="@{/}">Accueil</a></li>
+            </li>
+
+        </ul>
+        <div class="logout">
+            <hr>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"width="30" height="30">
+                    <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/>
+                </svg>Déconnexion</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Tableau de bord</h1>
+        <div class="stats">
+            <div class="card">Nombre d'élève <br><span>128 100</span></div>
+            <div class="card">Nombre de professeur <br><span>128 100</span></div>
+            <div class="card">Nombre d'utilisateur <br><span>128 100</span></div>
+            <div class="card">Élève par genre <br><span>
+
+          </span></div>
+        </div>
+    </div>
+</div>
+</body>
+

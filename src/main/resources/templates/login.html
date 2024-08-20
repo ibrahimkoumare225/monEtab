@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mon Etab - Connexion</title>
+      <link rel="stylesheet" href="/css/login_css.css">
+    </head>
+    <body>
+    <div class="login-container">
+      <div class="login-box">
+        <!--<img src="" alt="Logo" class="logo"> -->
+        <h2>Mon Etab</h2>
+        <form action="#">
+          <div class="input-group">
+            <input type="text" id="username" name="username" placeholder="Identifiant">
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" name="password" placeholder="Mot de passe">
+          </div>
+          <button type="submit" class="login-button"><a th:href="@{/homePage}" >Connexion</a></button>
+        </form>
+      </div>
+    </div>
+    </body>
+  </html>
