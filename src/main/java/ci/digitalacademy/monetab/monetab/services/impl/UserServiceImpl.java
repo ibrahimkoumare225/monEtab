@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> optionalUser = findOne(user.getId());
         if(optionalUser.isPresent()){
             User userToUpdate = optionalUser.get();
-            userToUpdate.setSpeudo(user.getSpeudo());
+            userToUpdate.setPseudo(user.getPseudo());
             userToUpdate.setPassword(user.getPassword());
             return save(userToUpdate);
         }else{
@@ -50,7 +50,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findOne(Long id) {
         log.debug("Request to find on user {}",id);
-
         return userRepository.findById(id);
     }
 

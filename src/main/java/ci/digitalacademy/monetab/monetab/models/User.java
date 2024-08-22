@@ -22,7 +22,7 @@ public class User {
     private Long id;
 
     @Column(name = "username",unique = true,nullable = false)
-    private String speudo;
+    private String pseudo;
 
     @Column(name = "password",nullable = false)
     private String password;
