@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StudentController {
 
 
-    @GetMapping("/studentPage")
+    @GetMapping("/homeEleve")
     public String homeStudent(){
-        return "studentPage";
+        return "dynamic/eleves/homeEleve";
     }
-    @GetMapping("ajouterStudent")
+    @GetMapping("/ajouterEleve")
     public String addStudent(){
-        return "ajouterStudent";
+        return "dynamic/eleves/ajouterEleve";
     }
 
-    @GetMapping("updateStudent")
+    @GetMapping("/updateEleve")
     public String updateStudent(){
-        return "updateStudent";
+        return "dynamic/eleves/updateEleve";
     }
 
 }

@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class UserController {
 
-    @GetMapping ("userPage")
+    @GetMapping ("homeUser")
     public String homeUser(){
-        return "userPage";
+        return "dynamic/utilisateur/homeUser";
     }
 
     @GetMapping("/ajouterUser")
     public String addUser(){
-        return "ajouterUser";
+        return "dynamic/utilisateur/ajouterUser";
     }
 
     @GetMapping("/updateUser")
     public String updateUser(){
-        return "updateUser";
+        return "dynamic/utilisateur/updateUser";
     }
 }

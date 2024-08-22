@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+        <div class="content-main">
+            <div th:insert="sidebar/sidebar :: sidebar"></div>
+            <ul class="header-list">
+                <li></li>
+                <li>
+                    <button type="button">
+                        <a href="#" class="add-student"><img src="/img/back.png">Retour</a>
+                    </button>
+                </li>
+            </ul>
+            <h1 class="titre">Ajouter un Utilisareur</h1>
+            <div class="center">
+                <form>
 
-</body>
-</html>
+                    <input type="text" id="nom" name="nom" placeholder="admin"><br>
+                    <input type="password" id="ancien mot de passe" name="ancien mot de passe" placeholder="ancien mot de passe"><br>
+
+                    <input type="password" id="Nouveau mot de passe" name="Nouveau mot de passe" placeholder="Nouveau mot de passe"><br>
+
+                    <input type="password" id="Confirmer mot de passe" name="Confirmer mot de passe" placeholder="Confirmer mot de passe">
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancel">Annuler</button>
+                        <button type="submit" class="btn-save">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </body>
+    </html>

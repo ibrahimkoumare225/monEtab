@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProfesseurController {
 
 
-    @GetMapping("/professorPage")
+    @GetMapping("/homeProfesseur")
     public String homePage(){
-        return "professorPage";
+        return "dynamic/professeur/homeProfesseur";
     }
 
-    @GetMapping("/ajouterProfessor")
+    @GetMapping("/ajouterProfesseur")
     public String addProfesseur(){
-        return "ajouterProfessor";
+        return "dynamic/professeur/ajouterProfesseur";
     }
-    @GetMapping("/updateProfessor")
+    @GetMapping("/updateProfesseur")
     public String updateProfessor(){
-        return "updateProfessor";
+        return "dynamic/professeur/updateProfesseur";
     }
 }

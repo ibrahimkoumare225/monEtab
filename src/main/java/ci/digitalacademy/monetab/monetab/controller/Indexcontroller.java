@@ -11,13 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Indexcontroller {
 
     @GetMapping
-    public String index(Model model){
-        User user  = new User(1,"BAKAYOKO", "JUNIOR");
-        User user1 = new User();
-        user1 = null;
-        model.addAttribute("students" , user );
-        model.addAttribute("students1" , user1 );
+    public String index(){
         return "index";
     }
+    @GetMapping("/sidebar")
+    public String sidebar() {
+        return "sidebar";
+    }
+
+
+
 
 }

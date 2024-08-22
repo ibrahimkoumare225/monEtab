@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            <link rel="stylesheet" href="/css/studenPage_css.css">
 
-</body>
-</html>
+        </head>
+        <body>
+        <div class="content-main" >
+            <div th:insert="sidebar/sidebar :: sidebar"></div>
+
+            <ul class="header-list">
+                <li>
+                    <h1>Élèves (2)</h1>
+                </li>
+                <li>
+                    <button type="button">
+                        <a class="add-student" th:href="@{/ajouterEleve}"><img src="/img/add.png" alt="Ajouter élève">Nouvel élève</a>
+                    </button>
+                </li>
+            </ul>
+            <div class="stats">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Genre</th>
+                        <th>Classe</th>
+                        <th><Matricule></Matricule></th>
+                        <th>Âge</th>
+                        <th>Téléphone</th>
+                        <th>Ville</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>KOFFI</td>
+                        <td>George</td>
+                        <td>M</td>
+                        <td>Terminale</td>
+                        <td>GDJ7GDGD</td>
+                        <td>25</td>
+                        <td>0123456789</td>
+                        <td>Bonoua</td>
+                        <td class="actions">
+                            <button class="btn btn-edit">Modifier</button>
+                            <button class="btn btn-delete">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>KONÉ</td>
+                        <td>Sali</td>
+                        <td>F</td>
+                        <td>2nde</td>
+                        <td>GDJ7GDGD</td>
+                        <td>22</td>
+                        <td>0123456789</td>
+                        <td>Abidjan</td>
+                        <td class="actions">
+                            <button class="btn btn-edit">Modifier</button>
+                            <button class="btn btn-delete">Supprimer</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </body>
+    </html>

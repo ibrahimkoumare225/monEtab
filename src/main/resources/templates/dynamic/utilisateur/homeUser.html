@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <div class="content-main">
+        <div th:insert="sidebar/sidebar :: sidebar"></div>
+        <ul class="header-list">
+            <li>
+                <h1>Utilisateurs (2)</h1>
+            </li>
+            <li>
+                <button type="button">
+                    <a href="#" class="add-student"><img src="/img/add.png" alt="Ajouter élève">Nouveau utilisateur</a>
+                </button>
+            </li>
+        </ul>
+        <div class="stats">
+            <table>
+                <thead>
+                <tr>
+                    <th>Pseudo</th>
+                    <th>Date de création</th>
+                    <th  rowspan="2">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>admin</td>
+                    <td>16/08/2024</td>
+                    <td class="actions">
+                        <button class="btn btn-edit">Modifier</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>user2</td>
+                    <td>13/08/2024</td>
+                    <td class="actions" >
+                        <button class="btn btn-edit">Modifier</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
 </html>

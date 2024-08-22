@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <div class="content-main">
+        <div th:insert="sidebar/sidebar :: sidebar"></div>
+        <ul class="header-list">
+            <li>
+                <h1>Professeurs (2)</h1>
+            </li>
+            <li>
+                <button type="button">
+                    <a href="#" class="add-student"><img src="/img/add.png" alt="Ajouter élève">Nouveau professeur</a>
+                </button>
+            </li>
+        </ul>
+        <div class="stats">
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Matiere</th>
+                    <th>Vacant</th>
+                    <th>Âge</th>
+                    <th>Téléphone</th>
+                    <th>Ville</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>KOUAKOU</td>
+                    <td>GREGOIRE</td>
+                    <td>Math</td>
+                    <td>Non</td>
+                    <td>40</td>
+                    <td>0123456789</td>
+                    <td>Touba</td>
+                    <td class="actions">
+                        <button class="btn btn-edit">Modifier</button>
+                        <button class="btn btn-delete">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ATTA</td>
+                    <td>Flora</td>
+                    <td>Physique</td>
+                    <td>Oui</td>
+                    <td>37</td>
+                    <td>0123456789</td>
+                    <td>Bouaké</td>
+                    <td class="actions">
+                        <button class="btn btn-edit">Modifier</button>
+                        <button class="btn btn-delete">Supprimer</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tableau de bord</title>
+      <link rel="stylesheet" href="/css/homePage_css.css">
+    </head>
+    <body>
+    <div class="container">
+      <div class="sidebar">
+        <div th:insert="sidebar/sidebar :: sidebar"></div>
+      </div>
+      <div class="main-content">
+        <h1>Tableau de bord</h1>
+        <div class="stats">
+          <div class="card">Nombre d'élève <br><span>128 100</span></div>
+          <div class="card">Nombre de professeur <br><span>128 100</span></div>
+          <div class="card">Nombre d'utilisateur <br><span>128 100</span></div>
+          <div class="card">Élève par genre <br><span>
+
+          </span></div>
+        </div>
+      </div>
+    </div>
+    </body>
+  </html>

@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-  <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-  </head>
-  <body>
-
-  <h1>Bienvenu dans l'application</h1>
- <h4>Students  Details</h4>
-  <p>ID: <span th:text="${students.id}"></span></p>
-  <p>First Name: <span th:text="${students.firstName}"></span></p>
-  <p>Last Name: <span th:text="${students.lastName}"></span></p>
-
-  <span th:text="${students1}?:'Object null'"></span>
-  <p th:text="${students1 == null }?'L\'etudiant n\'existe pas':'L\'etudiant existe'"></p>
-  <p th:if="${students1 == null}">
-    Au revoir
-  </p>
-
-  <a th:href="@{/login}" > Connexion</a>
-
-
-
-  </body>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mon Etab - Connexion</title>
+      <link rel="stylesheet" href="/css/login_css.css">
+    </head>
+    <body>
+    <div class="login-container">
+      <div class="login-box">
+        <!--<img src="" alt="Logo" class="logo"> -->
+        <h2>Mon Etab</h2>
+        <form action="#">
+          <div class="input-group">
+            <input type="text" id="username" name="username" placeholder="Identifiant">
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" name="password" placeholder="Mot de passe">
+          </div>
+          <button type="submit" class="login-button"><a th:href="@{/home}" >Connexion</a></button>
+        </form>
+      </div>
+    </div>
+    </body>
   </html>
