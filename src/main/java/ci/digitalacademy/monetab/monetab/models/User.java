@@ -1,13 +1,10 @@
 package ci.digitalacademy.monetab.monetab.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import java.time.Instant;
 
-import java.util.Date;
 
 @Getter
 @Setter
@@ -29,5 +26,20 @@ public class User {
 
     @Column(name = "create_date",nullable = false)
     private Instant creationdate;
+
+    @OneToOne
+    private Address address;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", pseudo='" + pseudo + '\'' +
+                ", password='" + password + '\'' +
+                ", creationdate=" + creationdate +
+                ", address=" + address.getCountry() +
+                '}';
     }
+}
+
 

@@ -1,12 +1,7 @@
 package ci.digitalacademy.monetab.monetab;
 
-import ci.digitalacademy.monetab.monetab.models.Professeur;
-import ci.digitalacademy.monetab.monetab.models.Student;
-import ci.digitalacademy.monetab.monetab.models.User;
-import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
-import ci.digitalacademy.monetab.monetab.services.StudentService;
-import ci.digitalacademy.monetab.monetab.services.UserService;
-import lombok.ToString;
+import ci.digitalacademy.monetab.monetab.models.*;
+import ci.digitalacademy.monetab.monetab.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-@ToString
 @SpringBootApplication
 public class MonEtabApplication implements CommandLineRunner {
 	@Autowired
@@ -26,14 +20,76 @@ public class MonEtabApplication implements CommandLineRunner {
 	private ProfesseurService professeurService;
 	@Autowired
 	 private StudentService studentService;
+	@Autowired
+	private FicheNoteService ficheNoteService;
+	@Autowired
+	private AddressService addressService;
 	public static void main(String[] args) {
 		SpringApplication.run(MonEtabApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User(null,"bakus","12345678", Instant.now());
-		User user2 = new User(null,"angeberthe","12345678",Instant.now());
+
+
+		Professeur prof = new Professeur();
+		Professeur prof2 = new Professeur();
+		prof.setVacant(true);
+		prof.setMatiere("Informatique");
+		prof2.setVacant(true);
+		prof2.setMatiere("Math");
+		professeurService.save(prof);
+		professeurService.save(prof2);
+
+		//List<Professeur> profs = professeurService.findAll();
+		//System.out.println(profs);
+		//Optional<Professeur> optionalProfesseur = professeurService.findOne(1L);
+		//System.out.println(optionalProfesseur);
+
+		//prof2.setMatiere("Chimie");
+		//professeurService.save(prof2);
+		//professeurService.delete((user.getId()));
+		//Student student = new Student(null,"Tle","Ikouma01");
+		//Student student2 = new Student(null,"Master","Akouma98");
+		//studentService.save(student);
+		//studentService.save(student2);
+
+		FicheNote ficheNote = new FicheNote();
+		FicheNote ficheNote2 = new FicheNote();
+		ficheNote.setNote(20);
+		ficheNote2.setNote(19);
+		ficheNoteService.save(ficheNote);
+		ficheNoteService.save(ficheNote2);
+		/*List<FicheNote> ficheNotes = ficheNoteService.findAll();
+		System.out.println(ficheNotes);
+		Optional<FicheNote> optionalFicheNote = ficheNoteService.findOne(1L);
+		System.out.println(optionalFicheNote);
+
+		List<Student> students = studentService.findAll();
+		System.out.println(students);
+		Optional<Professeur> optionalStudent = professeurService.findOne(1L);
+		System.out.println(optionalProfesseur);
+
+
+*/
+		Address add = new Address();
+		add.setCity("Paris");
+		add.setCountry("France");
+		add.setStreet("12 sainte-Honorine");
+		Address add2 = new Address();
+		add2.setCity("Paris");
+		add2.setCountry("France");
+		add2.setStreet("12 sainte-Honorine");
+		addressService.save(add);
+		addressService.save(add2);
+
+		List<Address> addresses = addressService.findAll();
+		System.out.println(addresses);
+		Optional<Address> optionalAddress = addressService.findOne(1L);
+		System.out.println(optionalAddress);
+
+		User user = new User(null,"bakus","12345678", Instant.now(),add);
+		User user2 = new User(null,"angeberthe","12345678",Instant.now(),add2);
 		userService.save(user);
 		userService.save(user2);
 		List<User> users= userService.findAll();
@@ -41,31 +97,6 @@ public class MonEtabApplication implements CommandLineRunner {
 		Optional<User> optionalUser = userService.findOne(2L);
 		System.out.println(optionalUser);
 
-		user2.setPseudo("Bakus007");
-		userService.save(user2);
-		userService.delete(user.getId());
 
-		Professeur prof = new Professeur(null,"Informatique",true);
-		Professeur prof2 = new Professeur(null,"Mathematique",true);
-		professeurService.save(prof);
-		professeurService.save(prof2);
-
-		List<Professeur> profs = professeurService.findAll();
-		System.out.println(profs);
-		Optional<Professeur> optionalProfesseur = professeurService.findOne(1L);
-		System.out.println(optionalProfesseur);
-
-		//prof2.setMatiere("Chimie");
-		//professeurService.save(prof2);
-		//professeurService.delete((user.getId()));
-		Student student = new Student(null,"Tle","Ikouma01");
-		Student student2 = new Student(null,"Master","Akouma98");
-		studentService.save(student);
-		studentService.save(student2);
-
-		List<Student> students = studentService.findAll();
-		System.out.println(students);
-		Optional<Professeur> optionalStudent = professeurService.findOne(1L);
-		System.out.println(optionalProfesseur);
 	}
 }

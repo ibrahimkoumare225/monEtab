@@ -1,23 +1,21 @@
 package ci.digitalacademy.monetab.monetab.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.Set;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
+@ToString
 @Entity(name="professeur")
 public class Professeur {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "matiere",nullable = false)
@@ -26,5 +24,6 @@ public class Professeur {
     @Column(name = "vacant",nullable = false)
     private boolean vacant;
 
-
+    @OneToMany
+    private Set<FicheNote> ficheNotes;
 }
