@@ -6,7 +6,7 @@
   list-style-type: none; /* Supprime les puces de la liste */
   padding: 0; /* Supprime le padding par défaut du <ul> */
   margin: 10px;
-  margin-top: 50px; /* Supprime les marges par défaut */
+  margin-top:50px; /* Supprime les marges par défaut */
 }
 
 .header-list li {

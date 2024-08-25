@@ -12,15 +12,15 @@
     <div class="container-fluid">
         <div class="row">
                 <div th:replace="sidebar/sidebar ::sidebar"></div>
-                <div class="content-main">
-                    <ul class="header-list">
-                        <li></li>
-                        <li>
-                            <button type="button">
-                                <a href="#" class="add-student"><img src="/img/back.png">Retour</a>
-                            </button>
-                        </li>
-                    </ul>
+                    <div class="col-md-9">
+                        <ul class="header-list">
+                            <li></li>
+                            <li>
+                                <button type="button">
+                                    <a th:href="@{/homeEleve}" class="add-student"><img src="/img/back.png">Retour</a>
+                                </button>
+                            </li>
+                        </ul>
                     <h1 class="titre">Ajouter un élève</h1>
                     <div class="center">
                         <form>
