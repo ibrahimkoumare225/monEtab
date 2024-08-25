@@ -1,70 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-.container {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  height: 100vh;
-}
-
-.sidebar {
-  background-color: #f3f3f3;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.logo h2 {
-  margin: 0;
-}
-
-.menu {
-  list-style-type: none;
-  padding: 0;
-
-}
-
-.menu li {
-  margin: 20px 0;
-  font-size: 1.2em;
-
-}
-ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: #333;
-  display: flex;
-  align-items: center;
-}
-
-.logout {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-
-}
-
-.logout a{
-  text-decoration: none;
-  color: #333;
-
-}
-
-.content-main {
-  background-color: #f7f7f7;
-  padding: 20px;
-}
 .header-list {
   display: flex;
   justify-content: space-between; /* Place les éléments aux extrémités */
   align-items: center; /* Centre verticalement les éléments */
   list-style-type: none; /* Supprime les puces de la liste */
   padding: 0; /* Supprime le padding par défaut du <ul> */
-  margin: 0; /* Supprime les marges par défaut */
+  margin: 10px;
+  margin-top: 50px; /* Supprime les marges par défaut */
 }
 
 .header-list li {
@@ -113,16 +55,21 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
+  border: 1px solid black;
+
 }
 
 table th, table td {
   padding: 15px;
-  border: 1px solid #ccc;
   text-align: left;
 }
 
-table th {
-  background-color: #ddd;
+table thead {
+  background-color: rgba(94, 93, 93, 0.17);
+}
+table tbody .tr1{
+  background-color: rgba(189, 184, 184, 0.17);
+
 }
 
 table td.actions {
@@ -138,10 +85,3 @@ table td .btn {
   color: #fff;
 }
 
-.btn-edit {
-  background-color: orange;
-}
-
-.btn-delete {
-  background-color: red;
-}
