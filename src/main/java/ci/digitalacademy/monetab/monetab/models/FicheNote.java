@@ -8,7 +8,6 @@ import lombok.*;
 @Getter
 @Setter
 
-@ToString
 @Entity(name = "ficheNote")
 public class FicheNote {
 
@@ -20,7 +19,17 @@ public class FicheNote {
     private double note;
     @Column(name="annee")
      private int annee;
-    /*@ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "professeur_id")
-    private Professeur professeur;*/
+    private Professeur professeur;
+
+    @Override
+    public String toString() {
+        return "FicheNote{" +
+                "id=" + id +
+                ", note=" + note +
+                ", annee=" + annee +
+                ", professeur=" + professeur +
+                '}';
+    }
 }

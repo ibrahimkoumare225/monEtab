@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +17,7 @@
             <ul class="header-list">
 
                 <li>
-                    <h1>Élèves (2)</h1>
+                    <h1>Élèves (<span th:text="${students.size()}"> </span>)</h1>
                 </li>
                 <li>
                     <button type="button">
@@ -38,26 +40,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="tr1">
-                    <td>KOFFI</td>
-                    <td>George</td>
-                    <td>M</td>
-                    <td>Tie</td>
-                    <td>GDJ7GDGD</td>
-                    <td>25</td>
-                    <td>0123456789</td>
-                    <td>Bonoua</td>
-                    <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
-                </tr>
-                <tr>
-                    <td>KONÉ</td>
-                    <td>Sali</td>
-                    <td>F</td>
-                    <td>2nd</td>
-                    <td>GDJ7GDGD</td>
-                    <td>22</td>
-                    <td>0123456789</td>
-                    <td>Abidjan</td>
+                <tr th:each="student:${students}" class="tr1">
+                    <td th:text="${student.getNom()}"></td>
+                    <td th:text="${student.getPrenom()}"></td>
+                    <td th:text="${student.getGenre()}"></td>
+                    <td th:text="${student.getClasse()}"></td>
+                    <td th:text="${student.getMatricule()}"></td>
+                    <td th:text="${student.getAge()}"></td>
+                    <td th:text="${student.getTelephone()}">0123456789</td>
+                    <td th:text="${student.getVille()}">Bonoua</td>
                     <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
                 </tr>
                 </tbody>

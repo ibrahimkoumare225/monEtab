@@ -9,14 +9,9 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-@ToString
+//@DiscriminatorValue(value="professeur")
 @Entity(name="professeur")
-public class Professeur {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Professeur extends Personne{
 
     @Column(name = "matiere",nullable = false)
     private String matiere;
@@ -24,6 +19,15 @@ public class Professeur {
     @Column(name = "vacant",nullable = false)
     private boolean vacant;
 
-    @OneToMany
+    /*@OneToMany(fetch = FetchType.EAGER,mappedBy = "professeur")
     private Set<FicheNote> ficheNotes;
+
+    @Override
+    public String toString() {
+        return "Professeur{" +
+                "id=" + id +
+                ", matiere='" + matiere + '\'' +
+                ", vacant=" + vacant +
+                 '}';
+    }*/
 }

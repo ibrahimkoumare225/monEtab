@@ -8,8 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 
 @SpringBootApplication
@@ -28,10 +30,45 @@ public class MonEtabApplication implements CommandLineRunner {
 		SpringApplication.run(MonEtabApplication.class, args);
 	}
 
+
+
 	@Override
 	public void run(String... args) throws Exception {
 
 
+		Student student1 = new Student();
+		student1.setMatricule("Ikouma01");
+		student1.setClasse("Licence 3");
+		student1.setNom("Koumare");
+		student1.setPrenom("Ibrahim");
+		student1.setVille("Orleans");
+		student1.setGenre('M');
+		student1.setAge(24L);
+		student1.setTelephone("+330778683716");
+		studentService.save(student1);
+
+		Student student2 = new Student();
+		student2.setMatricule("Akouma01");
+		student2.setClasse("Master 2");
+		student2.setNom("Koumare");
+		student2.setPrenom("Aboubacar");
+		student2.setVille("yamoussokro");
+		student2.setGenre('M');
+		student2.setAge(31L);
+		student2.setTelephone("+2250778683716");
+		studentService.save(student2);
+
+		Student student3 = new Student();
+		student3.setMatricule("Akouma03");
+		student3.setClasse("Master 2");
+		student3.setNom("Koumare");
+		student3.setPrenom("Adama");
+		student3.setVille("Abidjan");
+		student3.setGenre('M');
+		student3.setAge(41L);
+		student3.setTelephone("+22507495994988");
+		studentService.save(student3);
+/*
 		Professeur prof = new Professeur();
 		Professeur prof2 = new Professeur();
 		prof.setVacant(true);
@@ -41,8 +78,8 @@ public class MonEtabApplication implements CommandLineRunner {
 		professeurService.save(prof);
 		professeurService.save(prof2);
 
-		//List<Professeur> profs = professeurService.findAll();
-		//System.out.println(profs);
+		List<Professeur> profs = professeurService.findAll();
+		System.out.println(profs);
 		//Optional<Professeur> optionalProfesseur = professeurService.findOne(1L);
 		//System.out.println(optionalProfesseur);
 
@@ -58,12 +95,20 @@ public class MonEtabApplication implements CommandLineRunner {
 		FicheNote ficheNote2 = new FicheNote();
 		ficheNote.setNote(20);
 		ficheNote2.setNote(19);
+		ficheNote.setProfesseur(prof);
+		ficheNote2.setProfesseur(prof2);
 		ficheNoteService.save(ficheNote);
 		ficheNoteService.save(ficheNote2);
-		/*List<FicheNote> ficheNotes = ficheNoteService.findAll();
-		System.out.println(ficheNotes);
-		Optional<FicheNote> optionalFicheNote = ficheNoteService.findOne(1L);
-		System.out.println(optionalFicheNote);
+		Set<FicheNote> noteFiles = new HashSet<>();
+		noteFiles.add(ficheNote);
+		noteFiles.add(ficheNote2);
+
+		Professeur teacher = new Professeur();
+		teacher.setVacant(true);
+		teacher.setMatiere("java");
+		teacher.setMatiere("python");
+		teacher.setFicheNotes(noteFiles);
+		professeurService.save(teacher);
 
 		List<Student> students = studentService.findAll();
 		System.out.println(students);
@@ -71,7 +116,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		System.out.println(optionalProfesseur);
 
 
-*/
+
 		Address add = new Address();
 		add.setCity("Paris");
 		add.setCountry("France");
@@ -96,7 +141,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		System.out.println(users);
 		Optional<User> optionalUser = userService.findOne(2L);
 		System.out.println(optionalUser);
-
+*/
 
 	}
 }

@@ -8,14 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-
-@ToString
+//@DiscriminatorValue(value = "student")
 @Entity(name="student")
-public class Student {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Student extends Personne{
 
     @Column(name = "classe",nullable = false)
     private String classe;
