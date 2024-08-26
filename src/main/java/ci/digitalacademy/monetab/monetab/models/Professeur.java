@@ -19,6 +19,9 @@ public class Professeur extends Personne{
     @Column(name = "vacant",nullable = false)
     private boolean vacant;
 
+    public boolean getVacant() {
+        return vacant;
+    }
     /*@OneToMany(fetch = FetchType.EAGER,mappedBy = "professeur")
     private Set<FicheNote> ficheNotes;
 
