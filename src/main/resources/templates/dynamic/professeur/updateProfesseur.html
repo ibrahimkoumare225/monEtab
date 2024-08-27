@@ -15,7 +15,7 @@
                         <li></li>
                         <li>
                             <button type="button">
-                                <a href="#" class="add-student"><img src="/img/back.png">Retour</a>
+                                <a th:href="@{/homeProfesseur}" class="add-student"><img src="/img/back.png">Retour</a>
                             </button>
                         </li>
                     </ul>
@@ -59,7 +59,7 @@
                                     <input type="date" id="date" name="date">
                                 </div>
                                 <div class="form-actions">
-                                    <button type="button" class="btn-cancel">Annuler</button>
+                                    <button type="button" class="btn-cancel"><a class="text-decoration-none" th:href="@{/homeProfesseur}">Annuler</a> </button>
                                     <button type="submit" class="btn-save">Enregistrer</button>
                                 </div>
                             </form>
