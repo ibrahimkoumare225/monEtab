@@ -23,7 +23,7 @@
                          <div class="center">
                              <form th:object="${teacher}" th:action="@{/homeProfesseur}" method="post">
                                  <h1 th:text="${teacher.id == null}?'Ajouter professeur':'Modifier professeur'"></h1>
-                                 <input th:field="*{id}">
+                                 <input th:field="*{id}" type="hidden">
                                 <div class="form-group">
                                     <div class="form-group">
                                         <input th:field="*{nom}" type="text" id="nom" name="nom" placeholder="Nom"><br>
