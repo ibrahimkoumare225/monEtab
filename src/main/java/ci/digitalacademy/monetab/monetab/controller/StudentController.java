@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+
 @RequestMapping
 @Controller
 @RequiredArgsConstructor
@@ -40,5 +41,6 @@ public class StudentController {
 
         return "dynamic/eleves/updateEleve";
     }
+
 
 }

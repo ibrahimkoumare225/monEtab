@@ -1,18 +1,19 @@
 package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.Professeur;
-import ci.digitalacademy.monetab.monetab.models.Student;
-import ci.digitalacademy.monetab.monetab.repositories.ProfesseurRepository;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Optional;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
 
@@ -39,5 +40,16 @@ private final ProfesseurService professeurService;
     @GetMapping("/updateProfesseur")
     public String updateProfessor(){
         return "dynamic/professeur/updateProfesseur";
+    }
+    @GetMapping("/{id}")
+    public String showUpdateTeacherForms(Model model, @PathVariable Long id){
+        log.debug("Request to show update teacher forms");
+        Optional<Professeur> teacher = professeurService.findOne(id);
+        if (teacher.isPresent()){
+            model.addAttribute("teacher" , teacher.get());
+            return "dynamic/professeur/ajouterProfesseur";
+        } else {
+            return "redirect:/homeProfesseur";
+        }
     }
 }

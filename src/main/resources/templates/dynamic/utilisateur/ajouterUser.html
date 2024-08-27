@@ -23,8 +23,8 @@
                 <div class="center">
                     <form th:object="${user}" th:action="@{/homeUser}" method="post">
 
-                        <input type="text" id="nom" name="nom" placeholder="Pseudo"><br>
-                        <input th:field="*{pseudo}" type="password" id="prenom" name="prenom" placeholder="Mot de passe"><br>
+                        <input th:field="*{pseudo}" type="text" id="nom" name="nom" placeholder="Pseudo"><br>
+                        <input th:field="*{password}" type="password" id="prenom" name="prenom" placeholder="Mot de passe"><br>
 
                         <input th:field="*{password}" type="password" id="Mot de passe" name="mot de passe" placeholder="Confirmer mot de passe">
                         <div class="form-actions">
