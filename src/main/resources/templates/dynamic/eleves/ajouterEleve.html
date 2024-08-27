@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +24,9 @@
                         </ul>
                     <h1 class="titre">Ajouter un élève</h1>
                     <div class="center">
-                        <form>
+                        <form th:object="${teacher}" th:action="@{/homeEleve}" method="post">
                             <div class="form-group">
-                                <input type="text" id="nom" name="nom" placeholder="Nom"><br>
+                                <input  type="text" id="nom" name="nom" placeholder="Nom"><br>
                                 <input type="text" id="prenom" name="prenom" placeholder="Prenom">
                             </div>
                             <div class="form-group">
@@ -52,7 +53,14 @@
                                 <input type="text" id="telephone" name="telephone" placeholder="Téléphone">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="matricule" name="matricule" placeholder="Matricule">
+                                <label >Vacant :
+                                    <label for="true">
+                                        <input type="radio" id="true"  value="true">Yes :
+                                    </label>
+                                    <label for="false">
+                                        <input type="radio" id="false"  value="false">NO :
+                                    </label>
+                                </label>
                             </div>
                             <div class="form-group">
                                 <input type="text" id="ville" name="ville" placeholder="Ville">

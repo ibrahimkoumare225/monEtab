@@ -27,7 +27,7 @@ public abstract class Personne {
     private String telephone;
 
     @Column(name="gend",nullable = false)
-    private char genre;
+    private String genre;
 
     @Column(name="city",nullable = false)
     private String ville;

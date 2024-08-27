@@ -42,7 +42,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		student1.setNom("Koumare");
 		student1.setPrenom("Ibrahim");
 		student1.setVille("Orleans");
-		student1.setGenre('M');
+		student1.setGenre("M");
 		student1.setAge(24L);
 		student1.setTelephone("+330778683716");
 		studentService.save(student1);
@@ -53,7 +53,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		student2.setNom("Koumare");
 		student2.setPrenom("Aboubacar");
 		student2.setVille("yamoussokro");
-		student2.setGenre('M');
+		student2.setGenre("M");
 		student2.setAge(31L);
 		student2.setTelephone("+2250778683716");
 		studentService.save(student2);
@@ -64,7 +64,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		student3.setNom("Koumare");
 		student3.setPrenom("Adama");
 		student3.setVille("Abidjan");
-		student3.setGenre('M');
+		student3.setGenre("M");
 		student3.setAge(41L);
 		student3.setTelephone("+22507495994988");
 		studentService.save(student3);
@@ -77,6 +77,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		professeur1.setVacant(true);
 		professeur1.setTelephone("0123456789");
 		professeur1.setVille("Bouaké");
+		professeur1.setGenre("F");
 		professeurService.save(professeur1);
 
 		User user1 = new User();
