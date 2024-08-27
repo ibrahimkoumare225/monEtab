@@ -19,10 +19,12 @@
                             </button>
                         </li>
                     </ul>
-                    <h1 class="titre">Ajouter un Utilisateur</h1>
+                       <h1 lass="titre" th:text="${user.id == null}?'Ajouter professeur':'Modifier professeur'"></h1>
+
                 <div class="center">
                     <form th:object="${user}" th:action="@{/homeUser}" method="post">
 
+                        <input th:field="*{id}" type="hidden">
                         <input th:field="*{pseudo}" type="text" id="nom" name="nom" placeholder="Pseudo"><br>
                         <input th:field="*{password}" type="password" id="prenom" name="prenom" placeholder="Mot de passe"><br>
 
