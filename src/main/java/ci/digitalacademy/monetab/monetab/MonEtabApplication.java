@@ -79,6 +79,18 @@ public class MonEtabApplication implements CommandLineRunner {
 		professeur1.setVille("Bouaké");
 		professeurService.save(professeur1);
 
+		User user1 = new User();
+		user1.setPseudo("Ikouma");
+		user1.setCreationdate(Instant.now());
+		user1.setPassword("Ikouma01@");
+		userService.save(user1);
+
+		User user2 = new User();
+		user2.setPseudo("Akouma");
+		user2.setPassword("Akouma01@");
+		user2.setCreationdate(Instant.now());
+		userService.save(user2);
+
 /*
 		Professeur prof = new Professeur();
 		Professeur prof2 = new Professeur();

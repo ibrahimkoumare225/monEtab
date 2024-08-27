@@ -31,14 +31,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="tr1">
-                            <td>admin</td>
-                            <td>16/08/2024</td>
-                            <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
-                        </tr>
-                        <tr>
-                            <td>user2</td>
-                            <td>13/08/2024</td>
+                        <tr th:each="user:${users}" class="tr1">
+                            <td th:text="${user.getPseudo()}"></td>
+                            <td th:text="${user.getCreationdate()}"></td>
                             <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
                         </tr>
                         </tbody>

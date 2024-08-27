@@ -49,7 +49,10 @@
                     <td th:text="${student.getAge()}"></td>
                     <td th:text="${student.getTelephone()}">0123456789</td>
                     <td th:text="${student.getVille()}">Bonoua</td>
-                    <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
+                    <td>
+                        <button class="btn btn-warning "><a class="text-decoration-none" th:href="@{/updateEleve}">Modifier</a></button>
+                        <button class="btn btn-danger">Supprimer</button>
+                    </td>
                 </tr>
                 </tbody>
             </table>
