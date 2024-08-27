@@ -36,61 +36,7 @@ public class MonEtabApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
-		Student student1 = new Student();
-		student1.setMatricule("Ikouma01");
-		student1.setClasse("Licence 3");
-		student1.setNom("Koumare");
-		student1.setPrenom("Ibrahim");
-		student1.setVille("Orleans");
-		student1.setGenre("M");
-		student1.setAge(24L);
-		student1.setTelephone("+330778683716");
-		studentService.save(student1);
 
-		Student student2 = new Student();
-		student2.setMatricule("Akouma01");
-		student2.setClasse("Master 2");
-		student2.setNom("Koumare");
-		student2.setPrenom("Aboubacar");
-		student2.setVille("yamoussokro");
-		student2.setGenre("M");
-		student2.setAge(31L);
-		student2.setTelephone("+2250778683716");
-		studentService.save(student2);
-
-		Student student3 = new Student();
-		student3.setMatricule("Akouma03");
-		student3.setClasse("Master 2");
-		student3.setNom("Koumare");
-		student3.setPrenom("Adama");
-		student3.setVille("Abidjan");
-		student3.setGenre("M");
-		student3.setAge(41L);
-		student3.setTelephone("+22507495994988");
-		studentService.save(student3);
-
-		Professeur professeur1= new Professeur();
-		professeur1.setNom("ATTA");
-		professeur1.setPrenom("Flora");
-		professeur1.setAge(57L);
-		professeur1.setMatiere("Physique");
-		professeur1.setVacant(true);
-		professeur1.setTelephone("0123456789");
-		professeur1.setVille("Bouaké");
-		professeur1.setGenre("F");
-		professeurService.save(professeur1);
-
-		User user1 = new User();
-		user1.setPseudo("Ikouma");
-		user1.setCreationdate(Instant.now());
-		user1.setPassword("Ikouma01@");
-		userService.save(user1);
-
-		User user2 = new User();
-		user2.setPseudo("Akouma");
-		user2.setPassword("Akouma01@");
-		user2.setCreationdate(Instant.now());
-		userService.save(user2);
 
 /*
 		Professeur prof = new Professeur();

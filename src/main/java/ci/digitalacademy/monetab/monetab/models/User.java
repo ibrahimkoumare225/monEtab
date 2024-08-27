@@ -2,8 +2,10 @@ package ci.digitalacademy.monetab.monetab.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.Instant;
+import java.util.Date;
 
 
 @Getter
@@ -24,6 +26,7 @@ public class User {
     @Column(name = "password",nullable = false)
     private String password;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "create_date",nullable = false)
     private Instant creationdate;
 

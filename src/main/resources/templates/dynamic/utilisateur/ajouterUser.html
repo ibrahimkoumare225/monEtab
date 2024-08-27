@@ -21,13 +21,12 @@
                     </ul>
                     <h1 class="titre">Ajouter un Utilisateur</h1>
                 <div class="center">
-                    <form>
+                    <form th:object="${user}" th:action="@{/homeUser}" method="post">
 
                         <input type="text" id="nom" name="nom" placeholder="Pseudo"><br>
-                        <input type="password" id="prenom" name="prenom" placeholder="Mot de passe"><br>
+                        <input th:field="*{pseudo}" type="password" id="prenom" name="prenom" placeholder="Mot de passe"><br>
 
-                        <input type="password" id="Mot de passe" name="mot de passe" placeholder="Confirmer mot de passe">
-
+                        <input th:field="*{password}" type="password" id="Mot de passe" name="mot de passe" placeholder="Confirmer mot de passe">
                         <div class="form-actions">
                             <button type="button" class="btn-cancel">Annuler</button>
                             <button type="submit" class="btn-save">Enregistrer</button>
