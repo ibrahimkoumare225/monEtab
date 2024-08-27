@@ -15,7 +15,7 @@
                             <li></li>
                             <li>
                                 <button type="button">
-                                    <a href="#" class="add-student"><img src="/img/back.png">Retour</a>
+                                    <a th:href="@{/homeUser}" class="add-student"><img src="/img/back.png">Retour</a>
                                 </button>
                             </li>
                         </ul>
@@ -31,7 +31,7 @@
                                 <input type="password" id="Confirmer mot de passe" name="Confirmer mot de passe" placeholder="Confirmer mot de passe">
 
                                 <div class="form-actions">
-                                    <button type="button" class="btn-cancel">Annuler</button>
+                                    <button type="button" class="btn-cancel"><a class="text-decoration-none" th:href="@{/homeUser}">Annuler</a></button>
                                     <button type="submit" class="btn-save">Enregistrer</button>
                                 </div>
                             </form>

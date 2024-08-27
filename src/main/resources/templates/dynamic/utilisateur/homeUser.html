@@ -34,7 +34,9 @@
                         <tr th:each="user:${users}" class="tr1">
                             <td th:text="${user.getPseudo()}"></td>
                             <td th:text="${user.getCreationdate()}"></td>
-                            <td><button class="btn btn-warning">Modifier</button> <button class="btn btn-danger">Supprimer</button></td>
+                            <td>
+                                <button class="btn btn-warning"><a class="text-decoration-none" th:href="@{/updateUser}">Modifier</a></button>
+                                <button class="btn btn-danger">Supprimer</button></td>
                         </tr>
                         </tbody>
                     </table>
