@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.time.Instant;
 import java.util.List;
@@ -53,5 +54,12 @@ public class UserController {
         } else {
             return "redirect:/homeUser";
         }
+    }
+    @PostMapping("/deleteUser/{id}")
+    public String deleteStudent(@PathVariable Long id, RedirectAttributes redirectAttributes) {
+        log.info("Deleting user with id: " + id);
+        userService.delete(id);
+        redirectAttributes.addFlashAttribute("message", "User deleted successfully!");
+        return "redirect:/homeUser";
     }
 }
