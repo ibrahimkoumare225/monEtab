@@ -58,11 +58,11 @@ public class ProfesseurController {
         }
     }
 
-    @PostMapping("/delete/{id}")
-    public String deleteStudent(@PathVariable Long id, RedirectAttributes redirectAttributes) {
-        log.info("Deleting student with id: " + id);
+    @PostMapping("/deleteProfesseur/{id}")
+    public String deleteProfesseur(@PathVariable Long id, RedirectAttributes redirectAttributes) {
+        log.info("Deleting professeur with id: " + id);
         professeurService.delete(id);
-        redirectAttributes.addFlashAttribute("message", "Student deleted successfully!");
-        return "redirect:/students";
+        redirectAttributes.addFlashAttribute("message", "Professeur deleted successfully!");
+        return "redirect:/homeProfesseur";
     }
 }
