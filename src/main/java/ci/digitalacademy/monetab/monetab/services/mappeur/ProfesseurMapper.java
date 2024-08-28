@@ -17,7 +17,6 @@ public final class ProfesseurMapper {
         professeurDTO.setMatiere(professeur.getMatiere());
         professeurDTO.setAge(professeur.getAge());
         professeurDTO.setVille(professeur.getVille());
-        professeurDTO.setMatiere(professeur.getMatiere());
         return professeurDTO;
     }
     public static Professeur toEntity(ProfesseurDTO professeurDTO){
@@ -27,7 +26,6 @@ public final class ProfesseurMapper {
         professeur.setNom(professeurDTO.getNom());
         professeur.setPrenom(professeurDTO.getPrenom());
         professeur.setVacant(professeurDTO.getVacant());
-        professeur.setMatiere(professeurDTO.getMatiere());
         professeur.setAge(professeurDTO.getAge());
         professeur.setVille(professeurDTO.getVille());
         professeur.setMatiere(professeurDTO.getMatiere());
