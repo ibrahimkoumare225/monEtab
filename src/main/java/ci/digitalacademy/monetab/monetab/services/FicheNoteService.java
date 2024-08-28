@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services;
 
 import ci.digitalacademy.monetab.monetab.models.FicheNote;
+import ci.digitalacademy.monetab.monetab.services.dto.FicheNoteDTO;
 import ci.digitalacademy.monetab.monetab.services.impl.FicheNoteImpl;
 import org.springframework.stereotype.Service;
 
@@ -9,12 +10,12 @@ import java.util.Optional;
 @Service
 public interface FicheNoteService {
 
-    FicheNote save(FicheNote ficheNote);
+    FicheNoteDTO save(FicheNoteDTO ficheNoteDTO);
 
-    FicheNote update(FicheNote ficheNote);
+    FicheNoteDTO update(FicheNoteDTO ficheNoteDTO);
 
-    Optional<FicheNote> findOne(Long id);
+    Optional<FicheNoteDTO> findOne(Long id);
 
-    List<FicheNote> findAll();
+    List<FicheNoteDTO> findAll();
     void delete(Long id);
 }
