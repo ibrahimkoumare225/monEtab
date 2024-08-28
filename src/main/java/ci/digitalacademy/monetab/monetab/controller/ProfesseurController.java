@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,37 +20,49 @@ import java.util.Optional;
 
 public class ProfesseurController {
 
-private final ProfesseurService professeurService;
+    private final ProfesseurService professeurService;
+
     @GetMapping("/homeProfesseur")
-    public String homePage(Model model){
+    public String homePage(Model model) {
         List<Professeur> professeurs = professeurService.findAll();
-        model.addAttribute("professeurs",professeurs);
+        model.addAttribute("professeurs", professeurs);
         return "dynamic/professeur/homeProfesseur";
     }
 
     @PostMapping("/homeProfesseur")
-    public String saveProfesseur(Professeur teacher){
+    public String saveProfesseur(Professeur teacher) {
         professeurService.save(teacher);
         return "redirect:/homeProfesseur";
     }
+
     @GetMapping("/ajouterProfesseur")
-    public String showAddTeacherForms(Model model){
-        model.addAttribute("teacher",new Professeur());
+    public String showAddTeacherForms(Model model) {
+        model.addAttribute("teacher", new Professeur());
         return "dynamic/professeur/ajouterProfesseur";
     }
+
     @GetMapping("/updateProfesseur")
-    public String updateProfessor(){
+    public String updateProfessor() {
         return "dynamic/professeur/updateProfesseur";
     }
+
     @GetMapping("/{id}")
-    public String showUpdateTeacherForms(Model model, @PathVariable Long id){
+    public String showUpdateTeacherForms(Model model, @PathVariable Long id) {
         log.debug("Request to show update teacher forms");
         Optional<Professeur> teacher = professeurService.findOne(id);
-        if (teacher.isPresent()){
-            model.addAttribute("teacher" , teacher.get());
+        if (teacher.isPresent()) {
+            model.addAttribute("teacher", teacher.get());
             return "dynamic/professeur/ajouterProfesseur";
         } else {
             return "redirect:/homeProfesseur";
         }
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id, RedirectAttributes redirectAttributes) {
+        log.info("Deleting student with id: " + id);
+        professeurService.delete(id);
+        redirectAttributes.addFlashAttribute("message", "Student deleted successfully!");
+        return "redirect:/students";
     }
 }

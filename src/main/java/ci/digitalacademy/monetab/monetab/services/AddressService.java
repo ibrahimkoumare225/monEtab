@@ -1,6 +1,6 @@
 package ci.digitalacademy.monetab.monetab.services;
 
-import ci.digitalacademy.monetab.monetab.models.Address;
+import ci.digitalacademy.monetab.monetab.services.dto.AddressDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,11 +8,11 @@ import java.util.Optional;
 @Service
 public interface AddressService {
 
-    Address save(Address address);
-    Address update(Address address);
+    AddressDTO save(AddressDTO addressDTO);
+    AddressDTO update(AddressDTO addressDTO);
 
-    Optional<Address> findOne(Long id);
+    Optional<AddressDTO> findOne(Long id);
 
-    List<Address> findAll();
+    List<AddressDTO> findAll();
     void delete(Long id);
 }

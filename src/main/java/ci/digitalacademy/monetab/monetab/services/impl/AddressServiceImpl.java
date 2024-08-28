@@ -3,6 +3,8 @@ package ci.digitalacademy.monetab.monetab.services.impl;
 import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.repositories.AddressRepository;
 import ci.digitalacademy.monetab.monetab.services.AddressService;
+import ci.digitalacademy.monetab.monetab.services.dto.AddressDTO;
+import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,36 +15,40 @@ import java.util.Optional;
 @Slf4j
  @RequiredArgsConstructor
 public class AddressServiceImpl implements AddressService {
+
     private final AddressRepository addressRepository;
+
     @Override
-    public Address save(Address address) {
-        return addressRepository.save(address);
+    public AddressDTO save(AddressDTO addressDTO) {
+        log.debug("Request to save : {}", addressDTO);
+        Address address = AddressMapper.toEntity(addressDTO);
+        address = addressRepository.save(address);
+        return AddressMapper.toDto(address);
     }
 
     @Override
-    public Address update(Address address) {
-        log.debug("Request to upadte address{}",address);
-        Optional<Address> optionalProfesseur = findOne(address.getId());
-        if(optionalProfesseur.isPresent()){
-          Address addressToUpdate = optionalProfesseur.get();
-            addressToUpdate.setCity(address.getCity());
-            addressToUpdate.setCountry(address.getCountry());
-            return save(addressToUpdate);
-        }else{
-            throw new IllegalArgumentException();
-        }
+    public AddressDTO update(AddressDTO addressDTO) {
+        return findOne(addressDTO.getId()).map(existingAddress->{
+            existingAddress.setCountry(addressDTO.getCountry());
+            existingAddress.setCity(addressDTO.getCity());
+            return save(existingAddress);
+        }).orElseThrow(()->new IllegalArgumentException());
     }
 
     @Override
-    public Optional<Address> findOne(Long id) {
+    public Optional<AddressDTO> findOne(Long id) {
         log.debug("Request All address {}",id);
-        return addressRepository.findById(id);
+        return addressRepository.findById(id).map(address -> {
+            return AddressMapper.toDto(address);
+        });
     }
 
     @Override
-    public List<Address> findAll() {
+    public List<AddressDTO> findAll() {
         log.debug("Request on address {}");
-        return addressRepository.findAll();
+        return addressRepository.findAll().stream().map(address -> {
+            return AddressMapper.toDto(address);
+        }).toList();
     }
 
     @Override
@@ -51,3 +57,7 @@ public class AddressServiceImpl implements AddressService {
         addressRepository.deleteById(id);
     }
 }
+
+
+
+
