@@ -1371,3 +1371,284 @@ ci.digitalacademy.monetab.monetab.controller.ProfesseurController#showUpdateTeac
 2024-08-28T15:37:31.927+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2024-08-28T15:37:31.933+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.639 seconds (process running for 1956.155)
 2024-08-28T15:37:31.934+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T15:45:41.592+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-28T15:45:42.093+01:00  INFO 14132 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:45:42.094+01:00  INFO 14132 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-08-28T15:45:42.096+01:00  INFO 14132 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-08-28T15:45:42.188+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T15:45:42.188+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T15:45:42.395+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T15:45:42.423+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
+2024-08-28T15:45:42.554+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T15:45:42.555+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T15:45:42.556+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T15:45:42.591+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T15:45:42.591+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
+2024-08-28T15:45:42.648+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T15:45:42.652+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T15:45:42.663+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T15:45:42.665+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-08-28T15:45:42.668+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e59e315
+2024-08-28T15:45:42.669+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-08-28T15:45:42.670+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T15:45:42.786+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T15:45:42.833+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:45:42.995+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T15:45:43.004+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T15:45:43.144+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T15:45:43.159+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T15:45:43.164+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.007 seconds (process running for 2447.386)
+2024-08-28T15:45:43.165+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T15:45:44.662+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-28T15:45:45.256+01:00  INFO 14132 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:45:45.257+01:00  INFO 14132 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-08-28T15:45:45.260+01:00  INFO 14132 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-08-28T15:45:45.347+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T15:45:45.347+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T15:45:45.516+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T15:45:45.535+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 5 JPA repository interfaces.
+2024-08-28T15:45:45.623+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T15:45:45.624+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T15:45:45.624+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T15:45:45.653+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T15:45:45.653+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 304 ms
+2024-08-28T15:45:45.693+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T15:45:45.696+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T15:45:45.704+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T15:45:45.705+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-08-28T15:45:45.708+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cf911a0
+2024-08-28T15:45:45.708+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-08-28T15:45:45.709+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T15:45:45.773+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T15:45:45.800+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:45:45.870+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T15:45:45.876+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T15:45:45.957+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T15:45:45.971+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T15:45:45.975+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.652 seconds (process running for 2450.197)
+2024-08-28T15:45:45.976+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T15:54:13.360+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-28T15:54:13.821+01:00  INFO 14132 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:54:13.822+01:00  INFO 14132 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-08-28T15:54:13.825+01:00  INFO 14132 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-08-28T15:54:13.925+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T15:54:13.926+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T15:54:14.343+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T15:54:14.382+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2024-08-28T15:54:14.560+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T15:54:14.561+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T15:54:14.561+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T15:54:14.619+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T15:54:14.619+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2024-08-28T15:54:14.706+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T15:54:14.713+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T15:54:14.732+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T15:54:14.733+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-08-28T15:54:14.739+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@264bbe95
+2024-08-28T15:54:14.739+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-08-28T15:54:14.740+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T15:54:14.878+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T15:54:14.923+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:54:15.121+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T15:54:15.137+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T15:54:15.419+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T15:54:15.454+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T15:54:15.463+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.57 seconds (process running for 2959.686)
+2024-08-28T15:54:15.467+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T15:58:57.643+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-28T15:58:58.106+01:00  INFO 14132 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:58:58.107+01:00  INFO 14132 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-08-28T15:58:58.109+01:00  INFO 14132 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-08-28T15:58:58.231+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T15:58:58.232+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T15:58:58.439+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T15:58:58.457+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2024-08-28T15:58:58.533+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T15:58:58.534+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T15:58:58.534+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T15:58:58.558+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T15:58:58.558+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 314 ms
+2024-08-28T15:58:58.595+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T15:58:58.600+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T15:58:58.608+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T15:58:58.609+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-08-28T15:58:58.612+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@406c8be9
+2024-08-28T15:58:58.612+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-08-28T15:58:58.613+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T15:58:58.679+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T15:58:58.710+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T15:58:58.792+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T15:58:58.800+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T15:58:58.936+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T15:58:58.953+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T15:58:58.960+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.778 seconds (process running for 3243.182)
+2024-08-28T15:58:58.961+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:17:06.769+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-08-28T16:17:07.310+01:00  INFO 14132 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:07.311+01:00  INFO 14132 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-08-28T16:17:07.313+01:00  INFO 14132 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-08-28T16:17:07.427+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:17:07.427+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:17:07.690+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:17:07.724+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:17:07.872+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:17:07.874+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:17:07.874+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:17:07.922+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:17:07.922+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 488 ms
+2024-08-28T16:17:07.987+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:17:07.992+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:17:08.007+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:17:08.009+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-08-28T16:17:08.014+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61556dd8
+2024-08-28T16:17:08.014+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-08-28T16:17:08.014+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:17:08.101+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:17:08.133+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:08.286+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:17:08.299+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:17:08.437+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:17:08.452+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:17:08.457+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.067 seconds (process running for 4332.68)
+2024-08-28T16:17:08.458+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:17:09.964+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2024-08-28T16:17:10.462+01:00  INFO 14132 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:10.463+01:00  INFO 14132 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2024-08-28T16:17:10.466+01:00  INFO 14132 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2024-08-28T16:17:10.578+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:17:10.579+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:17:10.734+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:17:10.751+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:17:10.821+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:17:10.822+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:17:10.822+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:17:10.854+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:17:10.854+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2024-08-28T16:17:10.889+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:17:10.892+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:17:10.898+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:17:10.899+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-08-28T16:17:10.902+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f49480e
+2024-08-28T16:17:10.902+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-08-28T16:17:10.902+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:17:10.961+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:17:10.993+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:11.066+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:17:11.072+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:17:11.156+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:17:11.169+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:17:11.173+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.63 seconds (process running for 4335.395)
+2024-08-28T16:17:11.174+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:17:28.704+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-28T16:17:29.245+01:00  INFO 14132 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:29.246+01:00  INFO 14132 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-08-28T16:17:29.248+01:00  INFO 14132 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-08-28T16:17:29.352+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:17:29.352+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:17:29.590+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:17:29.613+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:17:29.718+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:17:29.719+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:17:29.719+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:17:29.759+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:17:29.759+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 406 ms
+2024-08-28T16:17:29.802+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:17:29.807+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:17:29.820+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:17:29.822+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-08-28T16:17:29.826+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d87ab8b
+2024-08-28T16:17:29.826+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-08-28T16:17:29.826+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:17:29.905+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:17:29.945+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:30.084+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:17:30.096+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:17:30.247+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:17:30.259+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:17:30.263+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.941 seconds (process running for 4354.485)
+2024-08-28T16:17:30.264+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:17:31.780+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-28T16:17:32.329+01:00  INFO 14132 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:32.330+01:00  INFO 14132 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-08-28T16:17:32.332+01:00  INFO 14132 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-08-28T16:17:32.450+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:17:32.450+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:17:32.703+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:17:32.733+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:17:32.839+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:17:32.840+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:17:32.841+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:17:32.876+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:17:32.877+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
+2024-08-28T16:17:32.922+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:17:32.928+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:17:32.942+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:17:32.943+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-08-28T16:17:32.946+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34585942
+2024-08-28T16:17:32.946+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-08-28T16:17:32.946+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:17:33.031+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:17:33.068+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:17:33.138+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:17:33.144+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:17:33.230+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:17:33.244+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:17:33.249+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.837 seconds (process running for 4357.471)
+2024-08-28T16:17:33.249+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:18:31.809+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2024-08-28T16:18:32.684+01:00  INFO 14132 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:18:32.685+01:00  INFO 14132 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-08-28T16:18:32.688+01:00  INFO 14132 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-08-28T16:18:32.797+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:18:32.798+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:18:33.027+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:18:33.057+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:18:33.343+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:18:33.344+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:18:33.344+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:18:33.404+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:18:33.404+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 603 ms
+2024-08-28T16:18:33.511+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:18:33.518+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:18:33.539+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:18:33.540+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2024-08-28T16:18:33.545+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c01bdc4
+2024-08-28T16:18:33.546+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2024-08-28T16:18:33.547+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:18:33.675+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:18:33.719+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:18:33.927+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:18:33.948+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:18:34.081+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:18:34.094+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:18:34.100+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.332 seconds (process running for 4418.322)
+2024-08-28T16:18:34.101+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:18:35.632+01:00  INFO 14132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2024-08-28T16:18:36.256+01:00  INFO 14132 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:18:36.256+01:00  INFO 14132 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2024-08-28T16:18:36.259+01:00  INFO 14132 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2024-08-28T16:18:36.369+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 14132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-28T16:18:36.369+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T16:18:36.591+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T16:18:36.613+01:00  INFO 14132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2024-08-28T16:18:36.670+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T16:18:36.670+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T16:18:36.678+01:00  INFO 14132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-28T16:18:36.702+01:00  INFO 14132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T16:18:36.707+01:00  INFO 14132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2024-08-28T16:18:36.734+01:00  INFO 14132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T16:18:36.739+01:00  INFO 14132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T16:18:36.744+01:00  INFO 14132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T16:18:36.744+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2024-08-28T16:18:36.749+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44db0e22
+2024-08-28T16:18:36.749+01:00  INFO 14132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2024-08-28T16:18:36.749+01:00  WARN 14132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T16:18:36.798+01:00  INFO 14132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T16:18:36.828+01:00  INFO 14132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T16:18:36.890+01:00  WARN 14132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T16:18:36.899+01:00  INFO 14132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T16:18:36.969+01:00  INFO 14132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-28T16:18:36.984+01:00  INFO 14132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T16:18:36.988+01:00  INFO 14132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 0.658 seconds (process running for 4421.214)
+2024-08-28T16:18:36.988+01:00  INFO 14132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-28T16:55:30.844+01:00  WARN 14132 --- [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=34m23s952ms743µs500ns).

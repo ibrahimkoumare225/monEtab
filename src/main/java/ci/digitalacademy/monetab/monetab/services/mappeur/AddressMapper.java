@@ -8,9 +8,9 @@ public final class AddressMapper {
     public static AddressDTO toDto(Address address){
          AddressDTO addressDTO = new AddressDTO();
          addressDTO.setId(address.getId());
-         addressDTO.setCity(addressDTO.getCity());
-         addressDTO.setStreet(addressDTO.getStreet());
-         addressDTO.setCountry(addressDTO.getCountry());
+         addressDTO.setCity(address.getCity());
+         addressDTO.setStreet(address.getStreet());
+         addressDTO.setCountry(address.getCountry());
          return addressDTO;
     }
     public static Address toEntity(AddressDTO addressDTO){

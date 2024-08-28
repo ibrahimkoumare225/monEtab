@@ -10,7 +10,7 @@ public final class FicheNoteMapper {
 
     public  static FicheNoteDTO toDto(FicheNote ficheNote){
         FicheNoteDTO ficheNoteDTO = new FicheNoteDTO();
-        ficheNoteDTO.setId(ficheNoteDTO.getId());
+        ficheNoteDTO.setId(ficheNote.getId());
         ficheNoteDTO.setNote(ficheNote.getNote());
         ficheNoteDTO.setAnnee(ficheNote.getAnnee());
         return ficheNoteDTO;

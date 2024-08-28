@@ -10,4 +10,8 @@ public class ProfesseurDTO extends PersonneDTO{
     private String matiere;
 
     private boolean vacant;
+
+    public boolean getVacant() {
+        return vacant;
+    }
 }
