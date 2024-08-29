@@ -4,7 +4,7 @@ import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.repositories.AddressRepository;
 import ci.digitalacademy.monetab.monetab.services.AddressService;
 import ci.digitalacademy.monetab.monetab.services.dto.AddressDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.impl.AddressMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -17,13 +17,14 @@ import java.util.Optional;
 public class AddressServiceImpl implements AddressService {
 
     private final AddressRepository addressRepository;
+    private  final AddressMapper addressMapper;
 
     @Override
     public AddressDTO save(AddressDTO addressDTO) {
         log.debug("Request to save : {}", addressDTO);
-        Address address = AddressMapper.toEntity(addressDTO);
+        Address address = addressMapper.toEntity(addressDTO);
         address = addressRepository.save(address);
-        return AddressMapper.toDto(address);
+        return addressMapper.toDto(address);
     }
 
     @Override
@@ -39,7 +40,7 @@ public class AddressServiceImpl implements AddressService {
     public Optional<AddressDTO> findOne(Long id) {
         log.debug("Request All address {}",id);
         return addressRepository.findById(id).map(address -> {
-            return AddressMapper.toDto(address);
+            return addressMapper.toDto(address);
         });
     }
 
@@ -47,7 +48,7 @@ public class AddressServiceImpl implements AddressService {
     public List<AddressDTO> findAll() {
             log.debug("Request on address {}");
             return addressRepository.findAll().stream().map(address -> {
-                return AddressMapper.toDto(address);
+                return addressMapper.toDto(address);
             }).toList();
     }
 

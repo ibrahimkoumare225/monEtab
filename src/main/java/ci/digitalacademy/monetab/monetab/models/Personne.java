@@ -35,6 +35,7 @@ public abstract class Personne {
     @Column(name="age",nullable = false)
     private Long age;
 
-
+    @OneToOne
+    private  Address address;
 
 }
