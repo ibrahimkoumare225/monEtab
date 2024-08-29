@@ -1,4 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.mappeur;
 
-public interface UserMapper {
+import ci.digitalacademy.monetab.monetab.models.User;
+import ci.digitalacademy.monetab.monetab.services.dto.UserDTO;
+
+public interface UserMapper extends EntityMapper<UserDTO, User>{
 }
