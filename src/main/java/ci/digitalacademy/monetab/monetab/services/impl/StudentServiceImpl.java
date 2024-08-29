@@ -4,7 +4,7 @@ import ci.digitalacademy.monetab.monetab.models.Student;
 import ci.digitalacademy.monetab.monetab.repositories.StudentRepository;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
 import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.impl.StudentMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.StudentMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -17,14 +17,15 @@ import java.util.Optional;
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
+    private  final StudentMapper studentMapper;
 
 
     @Override
     public StudentDTO save(StudentDTO studentDTO) {
         log.debug("Request to save : {}", studentDTO);
-        Student student = StudentMapper.toEntity(studentDTO);
+        Student student = studentMapper.toEntity(studentDTO);
         student = studentRepository.save(student);
-        return StudentMapper.toDto(student);
+        return studentMapper.toDto(student);
     }
 
     @Override
@@ -48,7 +49,7 @@ public class StudentServiceImpl implements StudentService {
     public Optional<StudentDTO> findOne(Long id) {
         log.debug("Request to find on student {}",id);
         return studentRepository.findById(id).map(student -> {
-            return StudentMapper.toDto(student);
+            return studentMapper.toDto(student);
         });
     }
 
@@ -56,7 +57,7 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentDTO> findAll() {
         log.debug("Request to find all student ");
         return studentRepository.findAll().stream().map(student -> {
-            return StudentMapper.toDto(student);
+            return studentMapper.toDto(student);
         }).toList();
     }
 }
