@@ -4,7 +4,7 @@ import ci.digitalacademy.monetab.monetab.models.Professeur;
 import ci.digitalacademy.monetab.monetab.repositories.ProfesseurRepository;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
 import ci.digitalacademy.monetab.monetab.services.dto.ProfesseurDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.impl.ProfesseurMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.ProfesseurMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -17,12 +17,13 @@ import java.util.Optional;
 public class ProfesseurServiceImpl implements ProfesseurService {
 
     private final ProfesseurRepository professeurRepository;
+    private  final ProfesseurMapper professeurMapper;
     @Override
     public ProfesseurDTO save(ProfesseurDTO professeurDTO) {
         log.debug("Request to save : {}", professeurDTO);
-        Professeur professeur = ProfesseurMapper.toEntity(professeurDTO);
+        Professeur professeur = professeurMapper.toEntity(professeurDTO);
         professeur = professeurRepository.save(professeur);
-        return ProfesseurMapper.toDto(professeur);
+        return professeurMapper.toDto(professeur);
     }
 
     @Override
@@ -40,7 +41,7 @@ public class ProfesseurServiceImpl implements ProfesseurService {
     public Optional<ProfesseurDTO> findOne(Long id) {
         log.debug("Request to find on professeur{}",id);
         return professeurRepository.findById(id).map(professeur -> {
-            return ProfesseurMapper.toDto(professeur);
+            return professeurMapper.toDto(professeur);
         });
     }
 
@@ -48,7 +49,7 @@ public class ProfesseurServiceImpl implements ProfesseurService {
     public List<ProfesseurDTO> findAll() {
         log.debug("Request to find all professeur ");
         return professeurRepository.findAll().stream().map(professeur -> {
-            return ProfesseurMapper.toDto(professeur);
+            return professeurMapper.toDto(professeur);
         }).toList();
     }
 
