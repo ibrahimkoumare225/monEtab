@@ -1,12 +1,10 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
-import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.models.FicheNote;
 import ci.digitalacademy.monetab.monetab.repositories.FicheNoteRepository;
 import ci.digitalacademy.monetab.monetab.services.FicheNoteService;
 import ci.digitalacademy.monetab.monetab.services.dto.FicheNoteDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
-import ci.digitalacademy.monetab.monetab.services.mappeur.FicheNoteMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.impl.FicheNoteMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -872,3 +872,428 @@ org.hibernate.PropertyValueException: not-null property references a null or tra
 2024-08-29T08:17:05.037+01:00  INFO 23532 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-29T08:17:05.040+01:00  INFO 23532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-08-29T08:17:05.046+01:00  INFO 23532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-29T08:17:11.680+01:00  INFO 8920 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 8920 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T08:17:11.684+01:00  INFO 8920 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T08:17:12.088+01:00  INFO 8920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-29T08:17:12.088+01:00  INFO 8920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-29T08:17:13.091+01:00  INFO 8920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T08:17:13.192+01:00  INFO 8920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+2024-08-29T08:17:14.045+01:00  INFO 8920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T08:17:14.062+01:00  INFO 8920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T08:17:14.062+01:00  INFO 8920 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T08:17:14.157+01:00  INFO 8920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T08:17:14.157+01:00  INFO 8920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2068 ms
+2024-08-29T08:17:14.383+01:00  INFO 8920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T08:17:14.448+01:00  INFO 8920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29T08:17:14.485+01:00  INFO 8920 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T08:17:14.800+01:00  INFO 8920 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T08:17:14.830+01:00  INFO 8920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-29T08:17:14.965+01:00  INFO 8920 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@424adcb9
+2024-08-29T08:17:14.967+01:00  INFO 8920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-29T08:17:15.022+01:00  WARN 8920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T08:17:15.980+01:00  INFO 8920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T08:17:16.065+01:00  INFO 8920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T08:17:16.379+01:00  WARN 8920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T08:17:16.397+01:00  INFO 8920 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T08:17:16.793+01:00  INFO 8920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T08:17:16.839+01:00  INFO 8920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T08:17:16.847+01:00  INFO 8920 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 5.908 seconds (process running for 7.247)
+2024-08-29T08:17:27.446+01:00  INFO 8920 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T08:17:27.446+01:00  INFO 8920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T08:17:27.447+01:00  INFO 8920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-29T08:17:33.344+01:00  WARN 8920 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T08:17:36.080+01:00  WARN 8920 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][dynamic/utilisateur/ajouterUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/ajouterUser, line 12, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T08:17:40.220+01:00  WARN 8920 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T08:17:43.543+01:00  INFO 8920 --- [http-nio-8080-exec-7] c.d.m.monetab.controller.UserController  : Deleting user with id: 4
+2024-08-29T08:17:43.591+01:00  WARN 8920 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T08:17:46.572+01:00  INFO 8920 --- [http-nio-8080-exec-2] c.d.m.monetab.controller.UserController  : Deleting user with id: 5
+2024-08-29T08:17:46.587+01:00  WARN 8920 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T09:01:53.746+01:00  INFO 8920 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T09:01:53.753+01:00  INFO 8920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-29T09:01:53.758+01:00  INFO 8920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-29T09:01:58.584+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T09:01:58.590+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T09:01:59.115+01:00  INFO 28132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-29T09:01:59.115+01:00  INFO 28132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-29T09:02:00.275+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T09:02:00.398+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 5 JPA repository interfaces.
+2024-08-29T09:02:01.326+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T09:02:01.348+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T09:02:01.348+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T09:02:01.465+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T09:02:01.466+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2350 ms
+2024-08-29T09:02:01.741+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T09:02:01.848+01:00  INFO 28132 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29T09:02:01.904+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T09:02:02.567+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T09:02:02.631+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-29T09:02:02.979+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9524b7
+2024-08-29T09:02:02.984+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-29T09:02:03.093+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T09:02:04.948+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T09:02:05.117+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T09:02:05.649+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T09:02:05.694+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T09:02:06.378+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T09:02:06.434+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T09:02:06.451+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 8.631 seconds (process running for 10.063)
+2024-08-29T09:02:15.261+01:00  INFO 28132 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T09:02:15.261+01:00  INFO 28132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T09:02:15.261+01:00  INFO 28132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-29T09:02:15.992+01:00  WARN 28132 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][dynamic/utilisateur/ajouterUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/ajouterUser, line 12, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T09:02:25.813+01:00  WARN 28132 --- [http-nio-8080-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-5][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T09:02:29.900+01:00  INFO 28132 --- [http-nio-8080-exec-3] c.d.m.monetab.controller.UserController  : Deleting user with id: 6
+2024-08-29T09:02:30.172+01:00  WARN 28132 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [186] milliseconds.
+2024-08-29T09:02:30.215+01:00  WARN 28132 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:10:24.831+01:00  INFO 28132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-29T10:10:25.554+01:00  INFO 28132 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:10:25.562+01:00  INFO 28132 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-29T10:10:25.567+01:00  INFO 28132 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-29T10:10:25.779+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:10:25.779+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:10:26.246+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:10:26.301+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:10:26.530+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:10:26.539+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:10:26.539+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:10:26.604+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:10:26.604+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2024-08-29T10:10:26.731+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:10:26.731+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:10:26.778+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:10:26.778+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-29T10:10:26.794+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50603eda
+2024-08-29T10:10:26.794+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-29T10:10:26.794+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:10:27.081+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:10:27.147+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:10:27.407+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:10:27.424+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:10:27.811+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:10:27.827+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:10:27.842+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 2.133 seconds (process running for 4111.462)
+2024-08-29T10:10:27.842+01:00  INFO 28132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T10:11:08.799+01:00  INFO 28132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 40 class path changes (0 additions, 40 deletions, 0 modifications)
+2024-08-29T10:11:09.608+01:00  INFO 28132 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:11:09.612+01:00  INFO 28132 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-29T10:11:09.616+01:00  INFO 28132 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-29T10:11:09.799+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:11:09.799+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:11:10.260+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:11:10.260+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-29T10:11:10.518+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:11:10.518+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:11:10.526+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:11:10.604+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:11:10.605+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 806 ms
+2024-08-29T10:11:10.688+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:11:10.695+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:11:10.712+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:11:10.714+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-29T10:11:10.720+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@795aa901
+2024-08-29T10:11:10.720+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-29T10:11:10.722+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:11:10.762+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:11:10.762+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:11:10.777+01:00  WARN 28132 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'monEtabApplication': Post-processing of merged bean definition failed
+2024-08-29T10:11:10.777+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:11:10.778+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-08-29T10:11:10.780+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-08-29T10:11:10.780+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T10:11:10.795+01:00  INFO 28132 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T10:11:10.844+01:00 ERROR 28132 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'monEtabApplication': Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:577) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at ci.digitalacademy.monetab.monetab.MonEtabApplication.main(MonEtabApplication.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [ci.digitalacademy.monetab.monetab.MonEtabApplication] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:757) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:689) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.buildPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:436) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findPersistenceMetadata(PersistenceAnnotationBeanPostProcessor.java:417) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.findInjectionMetadata(PersistenceAnnotationBeanPostProcessor.java:376) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(PersistenceAnnotationBeanPostProcessor.java:353) ~[spring-orm-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1103) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:574) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ci/digitalacademy/monetab/monetab/services/UserService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2371) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:752) ~[spring-core-6.1.11.jar:6.1.11]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ci.digitalacademy.monetab.monetab.services.UserService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	... 31 common frames omitted
+
+2024-08-29T10:11:15.071+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:11:15.072+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:11:15.498+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:11:15.559+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:11:15.708+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:11:15.711+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:11:15.711+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:11:15.762+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:11:15.762+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2024-08-29T10:11:15.843+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:11:15.849+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:11:15.866+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:11:15.868+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-08-29T10:11:15.872+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61c0f379
+2024-08-29T10:11:15.873+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-08-29T10:11:15.875+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:11:16.047+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:11:16.117+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:11:16.321+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:11:16.340+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:11:16.527+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:11:16.552+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:11:16.563+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.547 seconds (process running for 4160.175)
+2024-08-29T10:11:16.567+01:00  INFO 28132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T10:16:16.200+01:00  INFO 28132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-08-29T10:16:16.869+01:00  INFO 28132 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:16:16.870+01:00  INFO 28132 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-08-29T10:16:16.874+01:00  INFO 28132 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-08-29T10:16:16.998+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:16:16.999+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:16:17.400+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:16:17.448+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:16:17.610+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:16:17.612+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:16:17.612+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:16:17.679+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:16:17.679+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2024-08-29T10:16:17.780+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:16:17.787+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:16:17.806+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:16:17.808+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-08-29T10:16:17.813+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29310262
+2024-08-29T10:16:17.815+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-08-29T10:16:17.816+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:16:18.039+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:16:18.101+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:16:18.364+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:16:18.391+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:16:18.636+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:16:18.655+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:16:18.664+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.715 seconds (process running for 4462.277)
+2024-08-29T10:16:18.666+01:00  INFO 28132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T10:16:20.276+01:00  INFO 28132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-08-29T10:16:21.264+01:00  INFO 28132 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:16:21.264+01:00  INFO 28132 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-08-29T10:16:21.271+01:00  INFO 28132 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-08-29T10:16:21.423+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:16:21.423+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:16:21.805+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:16:21.861+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:16:22.041+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:16:22.043+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:16:22.043+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:16:22.087+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:16:22.098+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2024-08-29T10:16:22.188+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:16:22.206+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:16:22.228+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:16:22.231+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-08-29T10:16:22.238+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77bce0be
+2024-08-29T10:16:22.238+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-08-29T10:16:22.238+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:16:22.462+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:16:22.515+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:16:22.770+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:16:22.789+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:16:23.060+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:16:23.086+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:16:23.105+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.732 seconds (process running for 4466.716)
+2024-08-29T10:16:23.108+01:00  INFO 28132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T10:40:18.022+01:00  INFO 28132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 10 class path changes (0 additions, 10 deletions, 0 modifications)
+2024-08-29T10:40:18.745+01:00  INFO 28132 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:18.747+01:00  INFO 28132 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-08-29T10:40:18.750+01:00  INFO 28132 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-08-29T10:40:18.912+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:40:18.913+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:40:19.314+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:40:19.351+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:40:19.563+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:40:19.565+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:40:19.566+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:40:19.623+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:40:19.623+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 698 ms
+2024-08-29T10:40:19.704+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:40:19.712+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:40:19.739+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:40:19.741+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-08-29T10:40:19.747+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77375586
+2024-08-29T10:40:19.747+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-08-29T10:40:19.748+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:40:19.923+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:40:19.974+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:19.991+01:00  WARN 28132 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'monEtabApplication': Unsatisfied dependency expressed through field 'userService': No qualifying bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-29T10:40:19.991+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:19.992+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-08-29T10:40:19.999+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-08-29T10:40:19.999+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T10:40:20.011+01:00  INFO 28132 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T10:40:20.028+01:00 ERROR 28132 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in ci.digitalacademy.monetab.monetab.MonEtabApplication required a bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' in your configuration.
+
+2024-08-29T10:40:25.280+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:40:25.280+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:40:25.822+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:40:25.951+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:40:26.252+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:40:26.252+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:40:26.252+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:40:26.378+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:40:26.378+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1098 ms
+2024-08-29T10:40:26.535+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:40:26.551+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:40:26.566+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:40:26.566+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-08-29T10:40:26.582+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47af1ca6
+2024-08-29T10:40:26.582+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-08-29T10:40:26.582+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:40:26.770+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:40:26.841+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:26.849+01:00  WARN 28132 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'monEtabApplication': Unsatisfied dependency expressed through field 'userService': No qualifying bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-29T10:40:26.849+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:26.849+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-08-29T10:40:26.881+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-08-29T10:40:26.882+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-29T10:40:26.897+01:00  INFO 28132 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-29T10:40:26.902+01:00 ERROR 28132 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in ci.digitalacademy.monetab.monetab.MonEtabApplication required a bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'ci.digitalacademy.monetab.monetab.services.UserService' in your configuration.
+
+2024-08-29T10:40:28.520+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 28132 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:40:28.520+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:40:28.814+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:40:28.888+01:00  INFO 28132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:40:29.040+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:40:29.040+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:40:29.040+01:00  INFO 28132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:40:29.079+01:00  INFO 28132 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:40:29.079+01:00  INFO 28132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2024-08-29T10:40:29.142+01:00  INFO 28132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:40:29.158+01:00  INFO 28132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:40:29.174+01:00  INFO 28132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:40:29.174+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-08-29T10:40:29.174+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d9a6437
+2024-08-29T10:40:29.174+01:00  INFO 28132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-08-29T10:40:29.174+01:00  WARN 28132 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:40:29.315+01:00  INFO 28132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:40:29.362+01:00  INFO 28132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:40:29.536+01:00  WARN 28132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:40:29.554+01:00  INFO 28132 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:40:29.792+01:00  INFO 28132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:40:29.810+01:00  INFO 28132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:40:29.822+01:00  INFO 28132 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 1.34 seconds (process running for 5913.445)
+2024-08-29T10:40:29.836+01:00  INFO 28132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-29T10:56:31.249+01:00  WARN 28132 --- [HikariPool-9 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=2m31s680ms396µs700ns).
+2024-08-29T10:57:48.638+01:00  INFO 28132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:57:48.639+01:00  INFO 28132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-08-29T10:57:48.642+01:00  INFO 28132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-08-29T10:57:58.246+01:00  INFO 23480 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Starting MonEtabApplication using Java 17.0.8 with PID 23480 (C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab\target\classes started by Ibrahim Koumare in C:\Users\Ibrahim Koumare\IdeaProjects\MonEtab)
+2024-08-29T10:57:58.249+01:00  INFO 23480 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-08-29T10:57:58.700+01:00  INFO 23480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-29T10:57:58.701+01:00  INFO 23480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-29T10:57:59.891+01:00  INFO 23480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-29T10:58:00.024+01:00  INFO 23480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 5 JPA repository interfaces.
+2024-08-29T10:58:00.960+01:00  INFO 23480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-29T10:58:00.983+01:00  INFO 23480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-29T10:58:00.983+01:00  INFO 23480 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-29T10:58:01.089+01:00  INFO 23480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-29T10:58:01.089+01:00  INFO 23480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2387 ms
+2024-08-29T10:58:01.336+01:00  INFO 23480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-29T10:58:01.446+01:00  INFO 23480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-29T10:58:01.520+01:00  INFO 23480 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-29T10:58:02.061+01:00  INFO 23480 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-29T10:58:02.111+01:00  INFO 23480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-29T10:58:02.398+01:00  INFO 23480 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40c5dbbc
+2024-08-29T10:58:02.402+01:00  INFO 23480 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-29T10:58:02.503+01:00  WARN 23480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-29T10:58:04.301+01:00  INFO 23480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-29T10:58:04.422+01:00  INFO 23480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-29T10:58:05.021+01:00  WARN 23480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-29T10:58:05.065+01:00  INFO 23480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-29T10:58:05.883+01:00  INFO 23480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-29T10:58:05.951+01:00  INFO 23480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-29T10:58:05.971+01:00  INFO 23480 --- [restartedMain] c.d.monetab.monetab.MonEtabApplication   : Started MonEtabApplication in 8.461 seconds (process running for 9.775)
+2024-08-29T10:58:23.920+01:00  INFO 23480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-29T10:58:23.920+01:00  INFO 23480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-29T10:58:23.920+01:00  INFO 23480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-29T10:58:24.723+01:00  WARN 23480 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][layouts/home] Deprecated unwrapped fragment expression "sidebar/sidebar ::sidebar" found in template layouts/home, line 29, col 10. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar ::sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:32.172+01:00  WARN 23480 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][dynamic/rapport/rapport] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/rapport/rapport, line 12, col 20. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:35.592+01:00  WARN 23480 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][dynamic/eleves/homeEleve] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/eleves/homeEleve, line 16, col 13. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:38.744+01:00  WARN 23480 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][dynamic/eleves/ajouterEleve] Deprecated unwrapped fragment expression "sidebar/sidebar ::sidebar" found in template dynamic/eleves/ajouterEleve, line 15, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar ::sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:43.607+01:00  WARN 23480 --- [http-nio-8080-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-9][dynamic/eleves/homeEleve] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/eleves/homeEleve, line 16, col 13. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:48.195+01:00  INFO 23480 --- [http-nio-8080-exec-8] c.d.m.m.controller.StudentController     : Deleting student with id: 352
+2024-08-29T10:58:48.641+01:00  WARN 23480 --- [http-nio-8080-exec-8] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [270] milliseconds.
+2024-08-29T10:58:48.673+01:00  WARN 23480 --- [http-nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][dynamic/eleves/homeEleve] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/eleves/homeEleve, line 16, col 13. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:52.146+01:00  WARN 23480 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][dynamic/professeur/homeProfesseur] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/professeur/homeProfesseur, line 13, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:55.545+01:00  WARN 23480 --- [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:58:58.305+01:00  WARN 23480 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][dynamic/utilisateur/ajouterUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/ajouterUser, line 12, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:11.411+01:00  WARN 23480 --- [http-nio-8080-exec-7] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-7][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:23.997+01:00  WARN 23480 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][dynamic/utilisateur/ajouterUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/ajouterUser, line 12, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:25.971+01:00  WARN 23480 --- [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:29.693+01:00  INFO 23480 --- [http-nio-8080-exec-9] c.d.m.monetab.controller.UserController  : Deleting user with id: 7
+2024-08-29T10:59:29.750+01:00  WARN 23480 --- [http-nio-8080-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-6][dynamic/utilisateur/homeUser] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/utilisateur/homeUser, line 13, col 18. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:32.747+01:00  WARN 23480 --- [http-nio-8080-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-3][dynamic/professeur/homeProfesseur] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/professeur/homeProfesseur, line 13, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-08-29T10:59:40.498+01:00  INFO 23480 --- [http-nio-8080-exec-1] c.d.m.m.controller.ProfesseurController  : Deleting professeur with id: 452
+2024-08-29T10:59:40.567+01:00  WARN 23480 --- [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][dynamic/professeur/homeProfesseur] Deprecated unwrapped fragment expression "sidebar/sidebar :: sidebar" found in template dynamic/professeur/homeProfesseur, line 13, col 22. Please use the complete syntax of fragment expressions instead ("~{sidebar/sidebar :: sidebar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.

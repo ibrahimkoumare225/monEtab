@@ -4,7 +4,7 @@ import ci.digitalacademy.monetab.monetab.models.Professeur;
 import ci.digitalacademy.monetab.monetab.repositories.ProfesseurRepository;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
 import ci.digitalacademy.monetab.monetab.services.dto.ProfesseurDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.ProfesseurMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.impl.ProfesseurMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

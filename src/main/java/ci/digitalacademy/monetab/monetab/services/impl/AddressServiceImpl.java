@@ -4,7 +4,7 @@ import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.repositories.AddressRepository;
 import ci.digitalacademy.monetab.monetab.services.AddressService;
 import ci.digitalacademy.monetab.monetab.services.dto.AddressDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.impl.AddressMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

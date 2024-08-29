@@ -1,4 +1,4 @@
-package ci.digitalacademy.monetab.monetab.services.mappeur;
+package ci.digitalacademy.monetab.monetab.services.mappeur.impl;
 
 import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.services.dto.AddressDTO;

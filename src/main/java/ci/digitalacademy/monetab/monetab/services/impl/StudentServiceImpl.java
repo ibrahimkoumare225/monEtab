@@ -1,13 +1,10 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
-import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.models.Student;
-import ci.digitalacademy.monetab.monetab.models.User;
 import ci.digitalacademy.monetab.monetab.repositories.StudentRepository;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
 import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
-import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
-import ci.digitalacademy.monetab.monetab.services.mappeur.StudentMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.impl.StudentMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
