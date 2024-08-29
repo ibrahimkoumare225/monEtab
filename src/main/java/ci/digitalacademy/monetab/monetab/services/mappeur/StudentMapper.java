@@ -28,7 +28,7 @@ public final class StudentMapper {
         student.setNom(studentDTO.getNom());
         student.setPrenom(studentDTO.getPrenom());
         student.setAge(studentDTO.getAge());
-        student.setAge(studentDTO.getAge());
+        student.setGenre(studentDTO.getGenre());
         student.setTelephone(studentDTO.getTelephone());
         student.setVille(studentDTO.getVille());
         student.setMatricule(studentDTO.getMatricule());

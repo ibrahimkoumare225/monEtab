@@ -16,6 +16,7 @@ public final class ProfesseurMapper {
         professeurDTO.setVacant(professeur.getVacant());
         professeurDTO.setMatiere(professeur.getMatiere());
         professeurDTO.setAge(professeur.getAge());
+        professeurDTO.setTelephone(professeur.getTelephone());
         professeurDTO.setVille(professeur.getVille());
         return professeurDTO;
     }
@@ -28,6 +29,7 @@ public final class ProfesseurMapper {
         professeur.setVacant(professeurDTO.getVacant());
         professeur.setAge(professeurDTO.getAge());
         professeur.setVille(professeurDTO.getVille());
+        professeur.setTelephone(professeurDTO.getTelephone());
         professeur.setMatiere(professeurDTO.getMatiere());
         return professeur;
     }

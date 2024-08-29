@@ -9,10 +9,10 @@ public final class UserMapper {
 
     public static UserDTO toDto(User user){
         UserDTO userDTO = new UserDTO();
-        userDTO.setId(userDTO.getId());
-        userDTO.setPseudo(userDTO.getPseudo());
-        userDTO.setPassword(userDTO.getPassword());
-        user.setCreationdate(userDTO.getCreationdate());
+        userDTO.setId(user.getId());
+        userDTO.setPseudo(user.getPseudo());
+        userDTO.setPassword(user.getPassword());
+        userDTO.setCreationdate(user.getCreationdate());
         return userDTO;
     }
     public static User toEntity(UserDTO userDTO){

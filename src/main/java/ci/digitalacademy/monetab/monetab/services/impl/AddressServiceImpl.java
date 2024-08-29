@@ -45,10 +45,10 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public List<AddressDTO> findAll() {
-        log.debug("Request on address {}");
-        return addressRepository.findAll().stream().map(address -> {
-            return AddressMapper.toDto(address);
-        }).toList();
+            log.debug("Request on address {}");
+            return addressRepository.findAll().stream().map(address -> {
+                return AddressMapper.toDto(address);
+            }).toList();
     }
 
     @Override

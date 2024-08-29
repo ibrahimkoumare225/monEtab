@@ -1,21 +1,22 @@
 package ci.digitalacademy.monetab.monetab.services;
 
 import ci.digitalacademy.monetab.monetab.models.User;
+import ci.digitalacademy.monetab.monetab.services.dto.UserDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
 
-    User save(User user);
+    UserDTO save(UserDTO userDTO);
 
 
-    User update(User user);
+    UserDTO update(UserDTO userDTO);
 
 
-    Optional<User> findOne(Long id);
+    Optional<UserDTO> findOne(Long id);
 
-    List<User> findAll();
+    List<UserDTO> findAll();
 
     void delete(Long id);
 }

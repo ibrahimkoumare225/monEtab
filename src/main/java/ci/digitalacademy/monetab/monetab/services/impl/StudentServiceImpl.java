@@ -1,9 +1,13 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
+import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.models.Student;
 import ci.digitalacademy.monetab.monetab.models.User;
 import ci.digitalacademy.monetab.monetab.repositories.StudentRepository;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
+import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
+import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.StudentMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,23 +23,21 @@ public class StudentServiceImpl implements StudentService {
 
 
     @Override
-    public Student save(Student student) {
-        return studentRepository.save(student);
+    public StudentDTO save(StudentDTO studentDTO) {
+        log.debug("Request to save : {}", studentDTO);
+        Student student = StudentMapper.toEntity(studentDTO);
+        student = studentRepository.save(student);
+        return StudentMapper.toDto(student);
     }
 
     @Override
-    public Student update(Student student) {
-       log.debug("Request to upadte student{}",student);
-
-        Optional<Student> optionalUser = findOne(student.getId());
-        if(optionalUser.isPresent()){
-            Student studentToUpdate = optionalUser.get();
-            studentToUpdate.setClasse(student.getClasse());
-            studentToUpdate.setMatricule(student.getMatricule());
-            return save(studentToUpdate);
-        }else{
-            throw new IllegalArgumentException();
-        }
+    public StudentDTO update(StudentDTO studentDTO) {
+       log.debug("Request to upadte student{}",studentDTO);
+        return findOne(studentDTO.getId()).map(existingStudent->{
+            existingStudent.setNom(studentDTO.getNom());
+            existingStudent.setPrenom(studentDTO.getPrenom());
+            return save(existingStudent);
+        }).orElseThrow(()->new IllegalArgumentException());
     }
 
     @Override
@@ -46,14 +48,18 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Optional<Student> findOne(Long id) {
+    public Optional<StudentDTO> findOne(Long id) {
         log.debug("Request to find on student {}",id);
-        return studentRepository.findById(id);
+        return studentRepository.findById(id).map(student -> {
+            return StudentMapper.toDto(student);
+        });
     }
 
     @Override
-    public List<Student> findAll() {
+    public List<StudentDTO> findAll() {
         log.debug("Request to find all student ");
-        return studentRepository.findAll();
+        return studentRepository.findAll().stream().map(student -> {
+            return StudentMapper.toDto(student);
+        }).toList();
     }
 }

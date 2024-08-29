@@ -2,6 +2,7 @@ package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.User;
 import ci.digitalacademy.monetab.monetab.services.UserService;
+import ci.digitalacademy.monetab.monetab.services.dto.UserDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -23,19 +24,19 @@ public class UserController {
     private  final UserService userService;
     @GetMapping ("/homeUser")
     public String homeUser(Model model){
-        List<User> users = userService.findAll();
+        List<UserDTO> users = userService.findAll();
         model.addAttribute("users",users);
         return "dynamic/utilisateur/homeUser";
     }
     @PostMapping("/homeUser")
-    public String saveUser(User user){
+    public String saveUser(UserDTO user){
         user.setCreationdate(Instant.now()); // Initialisation de la date de création
         userService.save(user);
         return "redirect:/homeUser";
     }
     @GetMapping("/ajouterUser")
     public String addUser(Model model){
-        model.addAttribute("user",new User());
+        model.addAttribute("user",new UserDTO());
         return "dynamic/utilisateur/ajouterUser";
     }
 
@@ -47,7 +48,7 @@ public class UserController {
     @GetMapping("/user/{id}")
     public String showUpdateUserForms(Model model, @PathVariable Long id){
         log.debug("Request to show update student forms");
-        Optional<User> user = userService.findOne(id);
+        Optional<UserDTO> user = userService.findOne(id);
         if (user.isPresent()){
             model.addAttribute("user" , user.get());
             return "dynamic/utilisateur/ajouterUser";

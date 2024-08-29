@@ -3,6 +3,8 @@ package ci.digitalacademy.monetab.monetab.services.impl;
 import ci.digitalacademy.monetab.monetab.models.Professeur;
 import ci.digitalacademy.monetab.monetab.repositories.ProfesseurRepository;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
+import ci.digitalacademy.monetab.monetab.services.dto.ProfesseurDTO;
+import ci.digitalacademy.monetab.monetab.services.mappeur.ProfesseurMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,33 +18,38 @@ public class ProfesseurServiceImpl implements ProfesseurService {
 
     private final ProfesseurRepository professeurRepository;
     @Override
-    public Professeur save(Professeur professeur) {
-        return professeurRepository.save(professeur);
+    public ProfesseurDTO save(ProfesseurDTO professeurDTO) {
+        log.debug("Request to save : {}", professeurDTO);
+        Professeur professeur = ProfesseurMapper.toEntity(professeurDTO);
+        professeur = professeurRepository.save(professeur);
+        return ProfesseurMapper.toDto(professeur);
     }
 
     @Override
-    public Professeur update(Professeur professeur) {
-        log.debug("Request to upadte professeur{}",professeur);
-        Optional<Professeur> optionalProfesseur = findOne(professeur.getId());
-        if(optionalProfesseur.isPresent()){
-            Professeur professeurToUpdate = optionalProfesseur.get();
-            professeurToUpdate.setMatiere(professeur.getMatiere());
-            return save(professeurToUpdate);
-        }else{
-            throw new IllegalArgumentException();
-        }
+    public ProfesseurDTO update(ProfesseurDTO professeurDTO) {
+        log.debug("Request to upadte professeur{}",professeurDTO);
+        return findOne(professeurDTO.getId()).map(existingProfesseur->{
+            existingProfesseur.setNom(professeurDTO.getNom());
+            existingProfesseur.setPrenom(professeurDTO.getPrenom());
+            return save(existingProfesseur);
+        }).orElseThrow(()->new IllegalArgumentException());
+
     }
 
     @Override
-    public Optional<Professeur> findOne(Long id) {
+    public Optional<ProfesseurDTO> findOne(Long id) {
         log.debug("Request to find on professeur{}",id);
-        return professeurRepository.findById(id);
+        return professeurRepository.findById(id).map(professeur -> {
+            return ProfesseurMapper.toDto(professeur);
+        });
     }
 
     @Override
-    public List<Professeur> findAll() {
+    public List<ProfesseurDTO> findAll() {
         log.debug("Request to find all professeur ");
-        return professeurRepository.findAll();
+        return professeurRepository.findAll().stream().map(professeur -> {
+            return ProfesseurMapper.toDto(professeur);
+        }).toList();
     }
 
     @Override

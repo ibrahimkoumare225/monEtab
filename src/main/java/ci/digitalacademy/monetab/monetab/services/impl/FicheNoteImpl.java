@@ -1,8 +1,12 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
+import ci.digitalacademy.monetab.monetab.models.Address;
 import ci.digitalacademy.monetab.monetab.models.FicheNote;
 import ci.digitalacademy.monetab.monetab.repositories.FicheNoteRepository;
 import ci.digitalacademy.monetab.monetab.services.FicheNoteService;
+import ci.digitalacademy.monetab.monetab.services.dto.FicheNoteDTO;
+import ci.digitalacademy.monetab.monetab.services.mappeur.AddressMapper;
+import ci.digitalacademy.monetab.monetab.services.mappeur.FicheNoteMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,33 +20,37 @@ public class FicheNoteImpl implements FicheNoteService {
     private final FicheNoteRepository ficheNoteRepository;
 
     @Override
-    public FicheNote save(FicheNote ficheNote) {
-        return ficheNoteRepository.save(ficheNote);
+    public FicheNoteDTO save(FicheNoteDTO ficheNoteDTO) {
+        log.debug("Request to save : {}", ficheNoteDTO);
+        FicheNote ficheNote = FicheNoteMapper.toEntity(ficheNoteDTO);
+        ficheNote = ficheNoteRepository.save(ficheNote);
+        return FicheNoteMapper.toDto(ficheNote);
     }
 
     @Override
-    public FicheNote update(FicheNote ficheNote) {
-        log.debug("Request to upadte ficheNote{}",ficheNote);
-        Optional<FicheNote> optionalFicheNote = findOne(ficheNote.getId());
-        if(optionalFicheNote.isPresent()){
-            FicheNote ficheNoteToUpdate = optionalFicheNote.get();
-            ficheNoteToUpdate.setNote(ficheNote.getNote());
-            return save(ficheNoteToUpdate);
-        }else{
-            throw new IllegalArgumentException();
-        }
+    public FicheNoteDTO update(FicheNoteDTO ficheNoteDTO) {
+        log.debug("Request update ficheNote {}",ficheNoteDTO);
+        return findOne(ficheNoteDTO.getId()).map(existingFicheNote->{
+            existingFicheNote.setNote(ficheNoteDTO.getNote());
+            existingFicheNote.setAnnee(ficheNoteDTO.getAnnee());
+            return save(existingFicheNote);
+        }).orElseThrow(()->new IllegalArgumentException());
     }
 
     @Override
-    public Optional<FicheNote> findOne(Long id) {
+    public Optional<FicheNoteDTO> findOne(Long id) {
         log.debug("Request to find on ficheNote{}",id);
-        return ficheNoteRepository.findById(id);
+        return ficheNoteRepository.findById(id).map(ficheNote -> {
+            return FicheNoteMapper.toDto(ficheNote);
+        });
     }
 
     @Override
-    public List<FicheNote> findAll() {
+    public List<FicheNoteDTO> findAll() {
         log.debug("Request to find all ficheNote{}");
-        return ficheNoteRepository.findAll();
+        return ficheNoteRepository.findAll().stream().map(ficheNote -> {
+            return FicheNoteMapper.toDto(ficheNote);
+        }).toList();
     }
 
     @Override

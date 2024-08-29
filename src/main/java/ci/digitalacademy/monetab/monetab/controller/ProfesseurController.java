@@ -2,6 +2,7 @@ package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.Professeur;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
+import ci.digitalacademy.monetab.monetab.services.dto.ProfesseurDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -24,20 +25,20 @@ public class ProfesseurController {
 
     @GetMapping("/homeProfesseur")
     public String homePage(Model model) {
-        List<Professeur> professeurs = professeurService.findAll();
+        List<ProfesseurDTO> professeurs = professeurService.findAll();
         model.addAttribute("professeurs", professeurs);
         return "dynamic/professeur/homeProfesseur";
     }
 
     @PostMapping("/homeProfesseur")
-    public String saveProfesseur(Professeur teacher) {
+    public String saveProfesseur(ProfesseurDTO teacher) {
         professeurService.save(teacher);
         return "redirect:/homeProfesseur";
     }
 
     @GetMapping("/ajouterProfesseur")
     public String showAddTeacherForms(Model model) {
-        model.addAttribute("teacher", new Professeur());
+        model.addAttribute("teacher", new ProfesseurDTO());
         return "dynamic/professeur/ajouterProfesseur";
     }
 
@@ -49,7 +50,7 @@ public class ProfesseurController {
     @GetMapping("/{id}")
     public String showUpdateTeacherForms(Model model, @PathVariable Long id) {
         log.debug("Request to show update teacher forms");
-        Optional<Professeur> teacher = professeurService.findOne(id);
+        Optional<ProfesseurDTO> teacher = professeurService.findOne(id);
         if (teacher.isPresent()) {
             model.addAttribute("teacher", teacher.get());
             return "dynamic/professeur/ajouterProfesseur";

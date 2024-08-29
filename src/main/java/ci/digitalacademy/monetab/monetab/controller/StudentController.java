@@ -2,6 +2,7 @@ package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.Student;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
+import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -24,18 +25,18 @@ public class StudentController {
 
     @GetMapping("/homeEleve")
     public String homeStudent(Model model){
-        List<Student> students = studentService.findAll();
+        List<StudentDTO> students = studentService.findAll();
         model.addAttribute("students",students);
         return "dynamic/eleves/homeEleve";
     }
     @PostMapping("/homeEleve")
-    public String saveStudent(Student student){
+    public String saveStudent(StudentDTO student){
         studentService.save(student);
         return "redirect:/homeEleve";
     }
     @GetMapping("/ajouterEleve")
     public String addStudent(Model model){
-        model.addAttribute("student",new Student());
+        model.addAttribute("student",new StudentDTO());
         return "dynamic/eleves/ajouterEleve";
     }
 
@@ -48,7 +49,7 @@ public class StudentController {
     @GetMapping("/student/{id}")
     public String showUpdateStudentForms(Model model, @PathVariable Long id){
         log.debug("Request to show update student forms");
-        Optional<Student> student = studentService.findOne(id);
+        Optional<StudentDTO> student = studentService.findOne(id);
         if (student.isPresent()){
             model.addAttribute("student" , student.get());
             return "dynamic/eleves/ajouterEleve";
