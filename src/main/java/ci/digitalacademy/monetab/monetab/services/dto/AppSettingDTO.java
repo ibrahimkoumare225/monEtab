@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AppSetting {
+public class AppSettingDTO {
 
     private  Long id;
 
