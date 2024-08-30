@@ -9,11 +9,11 @@ public class AppSettingDTO {
 
     private  Long id;
 
-    private String smtp_server;
+    private String smtpServer;
 
-    private String smtp_port;
+    private String smtpPort;
 
-    private String smtp_username;
+    private String smtpUsername;
 
-    private String smtp_password;
+    private String smtpPassword;
 }

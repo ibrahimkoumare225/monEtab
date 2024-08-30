@@ -1,9 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.mappeur.impl;
 
 import ci.digitalacademy.monetab.monetab.models.RoleUser;
-import ci.digitalacademy.monetab.monetab.models.User;
 import ci.digitalacademy.monetab.monetab.services.dto.RoleUserDTO;
-import ci.digitalacademy.monetab.monetab.services.dto.UserDTO;
 import ci.digitalacademy.monetab.monetab.services.mappeur.RoleUserMapper;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
