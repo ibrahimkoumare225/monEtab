@@ -27,6 +27,6 @@ public class StudentCards {
 
     private String issue_date;
 
-    private Date expirationDate;
+    private Date expiration_date;
 
 }
