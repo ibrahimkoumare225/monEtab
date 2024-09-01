@@ -6,6 +6,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 
 @Getter
@@ -30,19 +32,13 @@ public class User {
     @Column(name = "create_date",nullable = false)
     private Instant creationdate;
 
-    @OneToOne
-    private Address address;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", pseudo='" + pseudo + '\'' +
-                ", password='" + password + '\'' +
-                ", creationdate=" + creationdate +
-                ", address=" + address.getCountry() +
-                '}';
-    }
+    @OneToMany( cascade = CascadeType.ALL)
+    private Set<RoleUser> roleUsers;
+
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
 }
 
 

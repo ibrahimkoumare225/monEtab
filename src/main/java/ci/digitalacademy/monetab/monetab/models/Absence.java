@@ -1,19 +1,12 @@
 package ci.digitalacademy.monetab.monetab.models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -27,4 +20,8 @@ public class Absence {
     private Date  absence_date;
 
     private int absence_number;
+
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 }

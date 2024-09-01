@@ -11,7 +11,6 @@ import java.time.Instant;
 
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-//@DiscriminatorColumn(name = "person_type")
 @Getter
 @Setter
 @Entity
@@ -40,5 +39,8 @@ public abstract class Personne {
 
     @OneToOne
     private  Address address;
+
+    @OneToOne
+    private User user;
 
 }

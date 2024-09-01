@@ -19,4 +19,6 @@ public interface AppSettingService {
 
     Optional<AppSettingDTO> findOne(Long id);
 
+    List<AppSettingDTO> findAllBySmtpUsername(String smtpUsername);
+
 }

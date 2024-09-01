@@ -27,4 +27,7 @@ public class AppSetting implements Serializable {
     private String smtpUsername;
     @Column(name = "smtp_Password")
     private String smtpPassword;
+
+    @OneToOne(mappedBy = "appSetting")
+    private School school;
 }

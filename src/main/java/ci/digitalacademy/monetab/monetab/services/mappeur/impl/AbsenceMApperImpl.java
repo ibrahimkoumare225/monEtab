@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.mappeur.impl;
 
 import ci.digitalacademy.monetab.monetab.models.Absence;
+import ci.digitalacademy.monetab.monetab.services.dto.AbsenceDTO;
 import ci.digitalacademy.monetab.monetab.services.mappeur.AbsenceMApper;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

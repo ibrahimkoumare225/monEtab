@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,4 +21,7 @@ public class RoleUser {
 
     @Column(name = "role")
     private String role;
+
+    @ManyToOne
+    private User user;
 }
