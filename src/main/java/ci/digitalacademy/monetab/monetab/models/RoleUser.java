@@ -16,12 +16,10 @@ import java.util.Set;
 @Table(name = "RoleUser")
 public class RoleUser {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "role")
     private String role;
 
-    @ManyToOne
-    private User user;
 }

@@ -21,4 +21,8 @@ public interface AppSettingService {
 
     List<AppSettingDTO> findAllBySmtpUsername(String smtpUsername);
 
+    public AppSettingDTO initApp(AppSettingDTO appSettingDTO);
+
+    public AppSettingDTO existingParameter();
+
 }

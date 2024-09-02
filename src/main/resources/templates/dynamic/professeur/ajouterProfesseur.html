@@ -42,16 +42,20 @@
                                         <option value="Francais">Francais</option>
                                     </select>
                                 </div>
-                                <div class="gender-selection">
-                                    <label for="homme">
-                                        <input th:field="*{genre}" type="radio" id="homme" name="genre" value="homme">
-                                        Homme
-                                    </label>
-                                    <label for="femme">
-                                        <input th:field="*{genre}" type="radio" id="femme" name="genre" value="femme">
-                                        Femme
-                                    </label>
-                                </div>
+                                 <div class="gender-selection">
+                                     <label for="homme">
+                                         <input th:field="*{genre}" type="radio" id="homme" name="genre" value="HOMME">
+                                         HOMME
+                                     </label>
+                                     <label for="autre">
+                                         <input th:field="*{genre}" type="radio" id="autre" name="genre" value="AUTRE">
+                                         AUTRE
+                                     </label>
+                                     <label for="femme">
+                                         <input th:field="*{genre}" type="radio" id="femme" name="genre" value="FEMME">
+                                         FEMME
+                                     </label>
+                                 </div>
                                 <div class="form-group">
                                     <input th:field="*{telephone}" type="text" id="telephone" name="telephone" placeholder="Téléphone">
                                 </div>

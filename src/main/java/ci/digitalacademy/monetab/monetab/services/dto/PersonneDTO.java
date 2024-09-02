@@ -1,5 +1,6 @@
 package ci.digitalacademy.monetab.monetab.services.dto;
 
+import ci.digitalacademy.monetab.monetab.models.enumerates.Gender;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +15,7 @@ public class PersonneDTO {
 
     private String telephone;
 
-    private String genre;
+    private Gender genre;
 
     private String ville;
 

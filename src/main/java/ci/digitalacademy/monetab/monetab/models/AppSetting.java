@@ -28,6 +28,6 @@ public class AppSetting implements Serializable {
     @Column(name = "smtp_Password")
     private String smtpPassword;
 
-    @OneToOne(mappedBy = "appSetting")
+    @OneToOne(mappedBy = "appSetting", cascade = CascadeType.ALL)
     private School school;
 }

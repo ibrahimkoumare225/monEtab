@@ -16,4 +16,5 @@ public class AppSettingDTO {
     private String smtpUsername;
 
     private String smtpPassword;
+
 }

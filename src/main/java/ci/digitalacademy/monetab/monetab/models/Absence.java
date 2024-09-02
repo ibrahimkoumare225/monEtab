@@ -4,7 +4,7 @@ package ci.digitalacademy.monetab.monetab.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
+import java.time.Instant;
 
 @Data
 @AllArgsConstructor
@@ -14,10 +14,10 @@ import java.util.Date;
 public class Absence {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date  absence_date;
+    private Instant absence_date;
 
     private int absence_number;
 

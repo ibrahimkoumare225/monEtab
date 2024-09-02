@@ -31,6 +31,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<UserDTO> initUser(List<UserDTO> users) {
+        List<UserDTO > usersDto = findAll();
+        if (usersDto.isEmpty()){
+            users.forEach(user->{
+                save(user);
+            });
+        }
+        return findAll();
+
+    }
+
+    @Override
     public UserDTO update(UserDTO userDTO) {
         log.debug("Request to upadte userDTO{}",userDTO);
         return findOne(userDTO.getId()).map(existingUser->{

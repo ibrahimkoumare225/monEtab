@@ -14,5 +14,5 @@ public class StudentCardsDTO {
 
     private String issue_date;
 
-    private Date expirationDate;
+    private Date expiration_date;
 }

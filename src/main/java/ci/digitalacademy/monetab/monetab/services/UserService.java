@@ -10,6 +10,7 @@ public interface UserService {
 
     UserDTO save(UserDTO userDTO);
 
+    List<UserDTO > initUser(List<UserDTO> users);
 
     UserDTO update(UserDTO userDTO);
 

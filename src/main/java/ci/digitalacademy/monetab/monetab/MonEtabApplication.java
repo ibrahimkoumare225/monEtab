@@ -1,31 +1,47 @@
 package ci.digitalacademy.monetab.monetab;
 
 import ci.digitalacademy.monetab.monetab.models.*;
+import ci.digitalacademy.monetab.monetab.repositories.AppSettingRepositories;
 import ci.digitalacademy.monetab.monetab.services.*;
+import ci.digitalacademy.monetab.monetab.services.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 
 @SpringBootApplication
 public class MonEtabApplication implements CommandLineRunner {
+
 	@Autowired
-	private UserService userService;
+	private StudentCardsService studentCardsService;
+
+	@Autowired
+	private RoleUserService roleUserService;
+
 	@Autowired
 	private ProfesseurService professeurService;
 	@Autowired
 	 private StudentService studentService;
-	@Autowired
-	private FicheNoteService ficheNoteService;
+
 	@Autowired
 	private AddressService addressService;
+
+	@Autowired
+	private SchoolService schoolService;
+
+	@Autowired
+	private AbsenceService absenceService;
+
+	@Autowired
+	private AppSettingService appSettingService;
+
+	@Autowired
+	private UserService userService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(MonEtabApplication.class, args);
 	}
@@ -34,84 +50,79 @@ public class MonEtabApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		RoleUserDTO role1 = new RoleUserDTO();
+		role1.setRole("admin");
+		RoleUserDTO role2 = new RoleUserDTO();
+		role2.setRole("staff");
+		RoleUserDTO role3 = new RoleUserDTO();
+		role3.setRole("other");
+
+		List<RoleUserDTO> roleUsersDTO = Arrays.asList(role1, role2, role3);
+		roleUsersDTO = roleUserService.initRoles(roleUsersDTO);
+
+		AppSettingDTO appSettingDTO = new AppSettingDTO();
+
+		appSettingDTO.setSmtpServer("mail");
+		appSettingDTO.setSmtpUsername("monEcole");
+		appSettingDTO.setSmtpPassword("monEcole123");
+		appSettingDTO.setSmtpPort("587");
+
+		AppSettingDTO settingDTO = appSettingService.initApp(appSettingDTO);
+
+		SchoolDTO schoolDTO = new SchoolDTO();
+		schoolDTO.setName("upb");
+		schoolDTO.setUrl_logo("https://cdn-icons-png.freepik.com/256/8074/8074788.png?semt=ais_hybrid");
+		schoolDTO.setAppSetting(settingDTO);
+		schoolDTO = schoolService.initSchool(schoolDTO);
+
+		Set<RoleUserDTO> roleUserAnge = new HashSet<>();
+		roleUserAnge.add(roleUsersDTO.get(0));
+
+		Set<RoleUserDTO> roleUserStaff = new HashSet<>();
+		roleUserStaff.add(roleUsersDTO.get(1));
+
+		Set<RoleUserDTO> roleUserOther = new HashSet<>();
+		roleUserOther.add(roleUsersDTO.get(2));
+
+		UserDTO ange = new UserDTO();
+		ange.setPseudo("angeB");
+		ange.setPassword("angeB123");
+		ange.setCreationdate(Instant.now());
+		ange.setSchool(schoolDTO);
+		ange.setRoles(roleUserAnge);
+
+		UserDTO staff = new UserDTO();
+		staff.setPseudo("delmas");
+		staff.setPassword("delmas007");
+		staff.setCreationdate(Instant.now());
+		staff.setSchool(schoolDTO);
+		staff.setRoles(roleUserStaff);
+
+		UserDTO other = new UserDTO();
+		other.setPseudo("bakus");
+		other.setPassword("bakus005");
+		other.setCreationdate(Instant.now());
+		other.setSchool(schoolDTO);
+		other.setRoles(roleUserOther);
+
+		List<UserDTO> users = List.of(ange, staff, other);
+		userService.initUser(users);
+		/*
+		StudentCardsDTO studentCards = new StudentCardsDTO();
+		studentCards.setReference("12345L");
+		studentCards.setIssue_date("12/08/2024");
+		studentCards.setExpiration_date(Date.from(Instant.now()));
+		studentCardsService.save(studentCards);
+
+
+
+		RoleUserDTO roleUserDTO = new RoleUserDTO();
+		roleUserDTO.setRole("Directeur");
+		roleUserService.save(roleUserDTO);*/
 
 
 
 
-/*
-		Professeur prof = new Professeur();
-		Professeur prof2 = new Professeur();
-		prof.setVacant(true);
-		prof.setMatiere("Informatique");
-		prof2.setVacant(true);
-		prof2.setMatiere("Math");
-		professeurService.save(prof);
-		professeurService.save(prof2);
-
-		List<Professeur> profs = professeurService.findAll();
-		System.out.println(profs);
-		//Optional<Professeur> optionalProfesseur = professeurService.findOne(1L);
-		//System.out.println(optionalProfesseur);
-
-		//prof2.setMatiere("Chimie");
-		//professeurService.save(prof2);
-		//professeurService.delete((user.getId()));
-		//Student student = new Student(null,"Tle","Ikouma01");
-		//Student student2 = new Student(null,"Master","Akouma98");
-		//studentService.save(student);
-		//studentService.save(student2);
-
-		FicheNote ficheNote = new FicheNote();
-		FicheNote ficheNote2 = new FicheNote();
-		ficheNote.setNote(20);
-		ficheNote2.setNote(19);
-		ficheNote.setProfesseur(prof);
-		ficheNote2.setProfesseur(prof2);
-		ficheNoteService.save(ficheNote);
-		ficheNoteService.save(ficheNote2);
-		Set<FicheNote> noteFiles = new HashSet<>();
-		noteFiles.add(ficheNote);
-		noteFiles.add(ficheNote2);
-
-		Professeur teacher = new Professeur();
-		teacher.setVacant(true);
-		teacher.setMatiere("java");
-		teacher.setMatiere("python");
-		teacher.setFicheNotes(noteFiles);
-		professeurService.save(teacher);
-
-		List<Student> students = studentService.findAll();
-		System.out.println(students);
-		Optional<Professeur> optionalStudent = professeurService.findOne(1L);
-		System.out.println(optionalProfesseur);
-
-
-
-		Address add = new Address();
-		add.setCity("Paris");
-		add.setCountry("France");
-		add.setStreet("12 sainte-Honorine");
-		Address add2 = new Address();
-		add2.setCity("Paris");
-		add2.setCountry("France");
-		add2.setStreet("12 sainte-Honorine");
-		addressService.save(add);
-		addressService.save(add2);
-
-		List<Address> addresses = addressService.findAll();
-		System.out.println(addresses);
-		Optional<Address> optionalAddress = addressService.findOne(1L);
-		System.out.println(optionalAddress);
-
-		User user = new User(null,"bakus","12345678", Instant.now(),add);
-		User user2 = new User(null,"angeberthe","12345678",Instant.now(),add2);
-		userService.save(user);
-		userService.save(user2);
-		List<User> users= userService.findAll();
-		System.out.println(users);
-		Optional<User> optionalUser = userService.findOne(2L);
-		System.out.println(optionalUser);
-*/
 
 	}
 }

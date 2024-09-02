@@ -9,6 +9,7 @@ public interface RoleUserService {
 
     RoleUserDTO save(RoleUserDTO  roleUserDTO);
 
+    List<RoleUserDTO> initRoles( List<RoleUserDTO> roleUsers);
 
     RoleUserDTO  update(RoleUserDTO  roleUserDTO);
 

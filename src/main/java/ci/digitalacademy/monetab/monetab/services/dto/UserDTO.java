@@ -1,14 +1,14 @@
 package ci.digitalacademy.monetab.monetab.services.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import ci.digitalacademy.monetab.monetab.models.RoleUser;
+import ci.digitalacademy.monetab.monetab.models.School;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.Instant;
+import java.util.Set;
 
 
 @Setter
@@ -21,5 +21,10 @@ public class UserDTO {
     private String password;
 
     private Instant creationdate;
+
+    private Set<RoleUserDTO> roles;
+
+
+    private SchoolDTO school;
 
 }

@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.Instant;
 
 @Getter
 @Setter
@@ -17,14 +17,14 @@ import java.util.Date;
 public class StudentCards {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
     private String reference;
 
     private String issue_date;
 
-    private Date expiration_date;
+    private Instant expiration_date;
 
     @ManyToOne
     private Student student;

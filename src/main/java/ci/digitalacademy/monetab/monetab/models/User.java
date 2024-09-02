@@ -19,7 +19,7 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "username",unique = true,nullable = false)
@@ -33,8 +33,8 @@ public class User {
     private Instant creationdate;
 
 
-    @OneToMany( cascade = CascadeType.ALL)
-    private Set<RoleUser> roleUsers;
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<RoleUser> roles;
 
     @ManyToOne
     @JoinColumn(name = "school_id")

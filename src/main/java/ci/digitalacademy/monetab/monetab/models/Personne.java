@@ -28,14 +28,14 @@ public abstract class Personne {
     @Column(name="phone_number",unique = true)
     private String telephone;
 
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Gender genre;
 
     @Column(name="city",nullable = false)
     private String ville;
 
     @Column(name="age",nullable = false)
-    private Instant age;
+    private Long age;
 
     @OneToOne
     private  Address address;

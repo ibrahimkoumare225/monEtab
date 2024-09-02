@@ -10,7 +10,6 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-//@DiscriminatorValue(value = "student")
 @Entity(name="student")
 public class Student extends Personne{
 

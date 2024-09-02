@@ -22,15 +22,5 @@ public class Professeur extends Personne{
     public boolean getVacant() {
         return vacant;
     }
-    /*@OneToMany(fetch = FetchType.EAGER,mappedBy = "professeur")
-    private Set<FicheNote> ficheNotes;
 
-    @Override
-    public String toString() {
-        return "Professeur{" +
-                "id=" + id +
-                ", matiere='" + matiere + '\'' +
-                ", vacant=" + vacant +
-                 '}';
-    }*/
 }
