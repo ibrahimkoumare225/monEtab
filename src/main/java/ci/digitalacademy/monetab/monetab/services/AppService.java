@@ -9,11 +9,9 @@ import java.util.List;
 
 public interface AppService {
 
+    SchoolDTO initSchool(SchoolDTO schoolDTO , AppSettingDTO appSettingDTO);
+    List<RoleUserDTO> initRoleUsers(List<RoleUserDTO> roleUserDTOList);
     AppSettingDTO initApp(AppSettingDTO    appSettingDTO);
-
-    SchoolDTO initSchool(SchoolDTO schoolDTO, AppSettingDTO appSettingDTO);
-
-    List<RoleUserDTO> initRoles(List<RoleUserDTO> roleUserDTO);
 
     void initUsers(List<RoleUserDTO> roleUserDTO, List<UserDTO> userDTO,SchoolDTO schoolDto);
 }

@@ -9,5 +9,5 @@ public class RoleUserDTO {
 
     private Long id;
 
-    private String role;
+    private String nameRole;
 }

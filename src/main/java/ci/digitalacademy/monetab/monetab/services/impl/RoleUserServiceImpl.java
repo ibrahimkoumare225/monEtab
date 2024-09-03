@@ -44,7 +44,7 @@ public class RoleUserServiceImpl implements RoleUserService {
     public RoleUserDTO update(RoleUserDTO roleUserDTO) {
         log.debug("Request to upadte schoolDTO{}",roleUserDTO);
         return findOne(roleUserDTO.getId()).map(existingRoleUser->{
-            existingRoleUser.setRole(roleUserDTO.getRole());
+            existingRoleUser.setNameRole(roleUserDTO.getNameRole());
             return save(existingRoleUser);
         }).orElseThrow(()->new IllegalArgumentException());
     }

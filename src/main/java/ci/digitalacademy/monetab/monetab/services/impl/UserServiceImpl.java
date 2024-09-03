@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +30,7 @@ public class UserServiceImpl implements UserService {
         user = userRepository.save(user);
         return userMapper.toDto(user);
     }
+
 
     @Override
     public List<UserDTO> initUser(List<UserDTO> users) {
@@ -53,6 +55,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Optional<UserDTO> findByPseudo(String pseudo) {
+
+        return userRepository.findByPseudo(pseudo).map(user -> userMapper.toDto(user));
+    }
+    @Override
     public Optional<UserDTO> findOne(Long id) {
         log.debug("Request to find on user {}",id);
         return userRepository.findById(id).map(user -> {
@@ -72,5 +79,12 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         log.debug("Request to delete user {}",id);
         userRepository.deleteById(id);
+    }
+
+
+    @Override
+    public List<UserDTO> findByCreatedDateLessThanAndRoleUserNameRole(Instant createdDate, String role) {
+        List<User> users = userRepository.findByCreatedDateLessThanAndRoleUserNameRole(createdDate, role);
+        return users.stream().map(user -> userMapper.toDto(user)).toList();
     }
 }

@@ -15,4 +15,5 @@ public interface ProfesseurService {
 
     List<ProfesseurDTO> findAll();
     void delete(Long id);
+    List<ProfesseurDTO>findByLastnameOrSpecialityAndGender(String query,String gender);
 }

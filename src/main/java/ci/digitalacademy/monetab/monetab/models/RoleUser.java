@@ -20,6 +20,6 @@ public class RoleUser {
     private Long id;
 
     @Column(name = "role")
-    private String role;
+    private String nameRole;
 
 }

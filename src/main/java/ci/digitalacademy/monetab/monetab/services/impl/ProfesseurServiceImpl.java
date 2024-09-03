@@ -58,4 +58,10 @@ public class ProfesseurServiceImpl implements ProfesseurService {
         log.debug("Request to delete professeur {}",id);
         professeurRepository.deleteById(id);
     }
+
+    @Override
+    public List<ProfesseurDTO> findByLastnameOrSpecialityAndGender(String query, String gender) {
+      //  List<Professeur> professeurs = professeurRepository.findByLastNameSpeciality(query,)
+        return null;
+    }
 }

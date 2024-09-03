@@ -30,7 +30,7 @@ public class UserController {
     }
     @PostMapping("/homeUser")
     public String saveUser(UserDTO user){
-        user.setCreationdate(Instant.now()); // Initialisation de la date de création
+        user.setCreatedDate(Instant.now()); // Initialisation de la date de création
         userService.save(user);
         return "redirect:/homeUser";
     }

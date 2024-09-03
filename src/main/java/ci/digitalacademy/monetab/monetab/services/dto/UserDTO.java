@@ -20,9 +20,9 @@ public class UserDTO {
 
     private String password;
 
-    private Instant creationdate;
+    private Instant createdDate;
 
-    private Set<RoleUserDTO> roles;
+    private Set<RoleUser> roleUser;
 
 
     private SchoolDTO school;

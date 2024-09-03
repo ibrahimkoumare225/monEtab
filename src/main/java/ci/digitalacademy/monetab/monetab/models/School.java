@@ -19,8 +19,8 @@ public class School {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "nom",nullable = false)
-    private String name;
+    @Column(name = "nameSchool",nullable = false)
+    private String nameSchool;
 
     @Column(name = "url_logo",nullable = false)
     private String url_logo;

@@ -44,7 +44,7 @@ public class SchoolServiceImpl implements SchoolService {
     @Override
     public SchoolDTO update(SchoolDTO schoolDTO) {
         return findOne(schoolDTO.getId()).map(existingSchool ->{
-            existingSchool.setName(schoolDTO.getName());
+            existingSchool.setNameSchool(schoolDTO.getNameSchool());
             existingSchool.setUrl_logo(schoolDTO.getUrl_logo());
             return save(schoolDTO);
         }).orElseThrow(()-> new IllegalArgumentException());

@@ -30,11 +30,11 @@ public class User {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "create_date",nullable = false)
-    private Instant creationdate;
+    private Instant createdDate;
 
 
     @OneToMany(fetch = FetchType.EAGER)
-    private Set<RoleUser> roles;
+    private Set<RoleUser> roleUser;
 
     @ManyToOne
     @JoinColumn(name = "school_id")

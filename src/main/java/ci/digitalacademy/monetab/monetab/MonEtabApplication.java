@@ -16,31 +16,6 @@ import java.util.*;
 @SpringBootApplication
 public class MonEtabApplication implements CommandLineRunner {
 
-	@Autowired
-	private StudentCardsService studentCardsService;
-
-	@Autowired
-	private RoleUserService roleUserService;
-
-	@Autowired
-	private ProfesseurService professeurService;
-	@Autowired
-	 private StudentService studentService;
-
-	@Autowired
-	private AddressService addressService;
-
-	@Autowired
-	private SchoolService schoolService;
-
-	@Autowired
-	private AbsenceService absenceService;
-
-	@Autowired
-	private AppSettingService appSettingService;
-
-	@Autowired
-	private UserService userService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MonEtabApplication.class, args);
@@ -50,6 +25,7 @@ public class MonEtabApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		/*
 		RoleUserDTO role1 = new RoleUserDTO();
 		role1.setRole("admin");
 		RoleUserDTO role2 = new RoleUserDTO();
@@ -106,7 +82,7 @@ public class MonEtabApplication implements CommandLineRunner {
 		other.setRoles(roleUserOther);
 
 		List<UserDTO> users = List.of(ange, staff, other);
-		userService.initUser(users);
+		userService.initUser(users);*/
 		/*
 		StudentCardsDTO studentCards = new StudentCardsDTO();
 		studentCards.setReference("12345L");

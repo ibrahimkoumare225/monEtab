@@ -13,8 +13,4 @@ public class HomePageController {
 
         return "layouts/home";
      }
-    @GetMapping("/login")
-    public String login(){
-        return "index";
-    }
 }
