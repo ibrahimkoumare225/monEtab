@@ -32,14 +32,14 @@ public class StudentController {
         return "redirect:/homeEleve";
     }
     @GetMapping("/search")
-    public String searchStudents(@RequestParam String query  , @RequestParam String genre, Model model)
+    public String searchStudents(@RequestParam String query,@RequestParam String genre, Model model)
     {
         List<StudentDTO> students = studentService.findByNomOrGenreOrMatricule(query , genre);
         model.addAttribute("students", students);
         model.addAttribute("query", query);
         model.addAttribute("genre", genre);
 
-        return "eleves/homeEleve";
+        return "dynamic/eleves/homeEleve";
     }
     @GetMapping("/ajouterEleve")
     public String addStudent(Model model){

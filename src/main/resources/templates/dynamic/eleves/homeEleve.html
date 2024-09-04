@@ -16,18 +16,19 @@
        <div th:replace="sidebar/sidebar :: sidebar"></div>
         <div class="col-md-9">
             <ul class="header-list">
-                <form class="d-flex" role="search" method="get" th:action="@{/students/search}">
-                    <input class="form-control me-2 w-100" th:value="${query}" name="query" type="search" placeholder="RECHERCHE : (NOM , GENRE , MATRICULE)" aria-label="Search">
-                    <select name="gender"  class="form-control" th:value="${genre}">
+
+                <li>
+                    <h1>Élèves (<span th:text="${students.size()}"> </span>)</h1>
+                </li>
+                <form class="d-flex" role="search" method="get" th:action="@{/search}">
+                    <input class="form-control me-2 w-100" th:value="${query}" name="query" type="search" placeholder="RECHERCHE : (NOM , GENRE , MATRICULE)" aria-label="Search" style="width: 100%">
+                    <select name="genre"  class="form-control" th:value="${genre}" style="width: 30%">
                         <option value="MAN" th:if="${genre == 'MAN'} ? 'selected':''">MAN</option>
                         <option value="WOMAN" th:if="${genre == 'WOMAN'} ? 'selected':''">WOMAN</option>
                         <option value="OTHER" th:if="${genre == 'OTHER'} ? 'selected':''">OTHER</option>
                     </select>
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
-                <li>
-                    <h1>Élèves (<span th:text="${students.size()}"> </span>)</h1>
-                </li>
                 <li>
                     <button type="button">
                         <a th:href="@{/ajouterEleve}" class="add-student"><img src="/img/add.png" alt="Ajouter élève">Nouvel élève</a>

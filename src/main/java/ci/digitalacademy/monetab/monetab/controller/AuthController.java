@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("login")
+@RequestMapping("/index")
 @RequiredArgsConstructor
 @Slf4j
 public class AuthController {
@@ -37,20 +37,8 @@ public class AuthController {
     @GetMapping
     public String showLoginPage(Model model) {
         log.debug("show login page");
-
-        List<SchoolDTO> schools = schoolService.findAll();
-        List<AppSettingDTO> appSettings = appSettingService.findAll();
-
-        if(schools.isEmpty() && appSettings.isEmpty()) {
-            return "redirect:/appService";
-        }else if(schools.isEmpty()) {
-            return "redirect:/school";
-        }else {
-            SchoolDTO school = schools.get(0);
-            model.addAttribute("user", new UserDTO());
-            model.addAttribute("school", school);
             return "index";
-        }
+
     }
 
     @PostMapping("save")
