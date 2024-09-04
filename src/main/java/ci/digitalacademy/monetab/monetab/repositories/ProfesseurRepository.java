@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ProfesseurRepository extends JpaRepository<Professeur,Long> {
-    //List<Professeur> findByLastNameSpeciality(String nom, String matiere, Gender genre);
+    List<Professeur> findByNomOrMatiereAndGenre(String nom, String matiere, Gender genre);
  }

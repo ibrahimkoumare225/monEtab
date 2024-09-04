@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -29,7 +30,16 @@ public class ProfesseurController {
         model.addAttribute("professeurs", professeurs);
         return "dynamic/professeur/homeProfesseur";
     }
+    @GetMapping("/searchTeachers")
+    public String searchTeachers(@RequestParam String query  , @RequestParam String genre, Model model)
+    {
+        List<ProfesseurDTO> professeurs = professeurService.findByNomOrMatiereAndGenre(query  , genre);
+        model.addAttribute("professeurs", professeurs);
+        model.addAttribute("query", query);
+        model.addAttribute("genre", genre);
 
+        return "dynamic/professeur/homeProfesseur";
+    }
     @PostMapping("/homeProfesseur")
     public String saveProfesseur(ProfesseurDTO teacher) {
         professeurService.save(teacher);

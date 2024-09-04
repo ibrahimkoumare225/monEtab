@@ -63,7 +63,7 @@
                     <td th:text="${student.getVille()}">Bonoua</td>
                     <td>
                         <button class="btn btn-warning "><a class="text-decoration-none" th:href="@{/student/{id}(id=${student.id})}">Modifier</a></button>
-                        <form th:action="@{/deleteStudent/{id}(id=${student.id})}" method="post" style="display:inline;">
+                        <form th:action="@{/deleteStudent/{id}(id=${student.id})}" method="post" >
                             <button type="submit" class="btn btn-danger delete-btn">Supprimer</button>
                         </form>
                     </td>

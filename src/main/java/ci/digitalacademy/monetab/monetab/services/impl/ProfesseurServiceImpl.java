@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
 import ci.digitalacademy.monetab.monetab.models.Professeur;
+import ci.digitalacademy.monetab.monetab.models.enumerates.Gender;
 import ci.digitalacademy.monetab.monetab.repositories.ProfesseurRepository;
 import ci.digitalacademy.monetab.monetab.services.ProfesseurService;
 import ci.digitalacademy.monetab.monetab.services.dto.ProfesseurDTO;
@@ -60,8 +61,8 @@ public class ProfesseurServiceImpl implements ProfesseurService {
     }
 
     @Override
-    public List<ProfesseurDTO> findByLastnameOrSpecialityAndGender(String query, String gender) {
-      //  List<Professeur> professeurs = professeurRepository.findByLastNameSpeciality(query,)
-        return null;
+    public List<ProfesseurDTO> findByNomOrMatiereAndGenre(String query, String genre) {
+        List<Professeur> teachers = professeurRepository.findByNomOrMatiereAndGenre(query , query ,  Gender.valueOf(genre));
+        return teachers.stream().map(teacher -> professeurMapper.toDto(teacher)).toList();
     }
 }

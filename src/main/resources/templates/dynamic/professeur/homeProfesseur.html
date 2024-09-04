@@ -16,6 +16,15 @@
                         <li>
                             <h1>Professeurs (<span th:text="${professeurs.size()}"> </span>)</h1>
                         </li>
+                        <form class="d-flex" role="search" method="get" th:action="@{/searchTeachers}">
+                            <input class="form-control me-2 w-100" th:value="${query}" name="query" type="search" placeholder="RECHERCHE : (NOM , GENRE , MATIERE)" aria-label="Search">
+                            <select name="genre"  class="form-control" th:value="${genre}">
+                                <option value="MAN" th:if="${genre == 'MAN'} ? 'selected':''">MAN</option>
+                                <option value="WOMAN" th:if="${genre == 'WOMAN'} ? 'selected':''">WOMAN</option>
+                                <option value="OTHER" th:if="${genre == 'OTHER'} ? 'selected':''">OTHER</option>
+                            </select>
+                            <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                        </form>
                         <li>
                             <button type="button">
                                 <a th:href="@{/ajouterProfesseur}" class="add-student"><img src="/img/add.png" alt="Ajouter élève">Nouveau professeur</a>
