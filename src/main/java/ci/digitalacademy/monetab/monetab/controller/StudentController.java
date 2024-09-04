@@ -7,10 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -33,6 +30,16 @@ public class StudentController {
     public String saveStudent(StudentDTO student){
         studentService.save(student);
         return "redirect:/homeEleve";
+    }
+    @GetMapping("/search")
+    public String searchStudents(@RequestParam String query  , @RequestParam String genre, Model model)
+    {
+        List<StudentDTO> students = studentService.findByNomOrGenreOrMatricule(query , genre);
+        model.addAttribute("students", students);
+        model.addAttribute("query", query);
+        model.addAttribute("genre", genre);
+
+        return "eleves/homeEleve";
     }
     @GetMapping("/ajouterEleve")
     public String addStudent(Model model){

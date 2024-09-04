@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.impl;
 
 import ci.digitalacademy.monetab.monetab.models.Student;
+import ci.digitalacademy.monetab.monetab.models.enumerates.Gender;
 import ci.digitalacademy.monetab.monetab.repositories.StudentRepository;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
 import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
@@ -52,7 +53,13 @@ public class StudentServiceImpl implements StudentService {
             return studentMapper.toDto(student);
         });
     }
-
+    @Override
+    public List<StudentDTO> findByNomOrGenreOrMatricule(String query , String genre) {
+        List<Student> students = studentRepository.findByNomIgnoreCaseOrMatriculeIgnoreCaseAndGenre(query  , query , Gender.valueOf(genre));
+        return students.stream().map(student -> {
+            return studentMapper.toDto(student);
+        }).toList();
+    }
     @Override
     public List<StudentDTO> findAll() {
         log.debug("Request to find all student ");

@@ -16,6 +16,15 @@
        <div th:replace="sidebar/sidebar :: sidebar"></div>
         <div class="col-md-9">
             <ul class="header-list">
+                <form class="d-flex" role="search" method="get" th:action="@{/students/search}">
+                    <input class="form-control me-2 w-100" th:value="${query}" name="query" type="search" placeholder="RECHERCHE : (NOM , GENRE , MATRICULE)" aria-label="Search">
+                    <select name="gender"  class="form-control" th:value="${genre}">
+                        <option value="MAN" th:if="${genre == 'MAN'} ? 'selected':''">MAN</option>
+                        <option value="WOMAN" th:if="${genre == 'WOMAN'} ? 'selected':''">WOMAN</option>
+                        <option value="OTHER" th:if="${genre == 'OTHER'} ? 'selected':''">OTHER</option>
+                    </select>
+                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                </form>
                 <li>
                     <h1>Élèves (<span th:text="${students.size()}"> </span>)</h1>
                 </li>
@@ -28,6 +37,7 @@
             <table class="table">
                 <thead>
                 <tr>
+                    <th>id</th>
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Genre</th>
@@ -40,7 +50,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="student:${students}" class="tr1">
+                <tr th:each="student , status : ${students}">
+                    <td th:text="${status.count}"></td>
                     <td th:text="${student.getNom()}"></td>
                     <td th:text="${student.getPrenom()}"></td>
                     <td th:text="${student.genre}"></td>

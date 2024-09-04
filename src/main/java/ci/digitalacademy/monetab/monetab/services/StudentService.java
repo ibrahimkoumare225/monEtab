@@ -13,6 +13,7 @@ public interface StudentService {
 
     StudentDTO update(StudentDTO studentDTO);
 
+    List<StudentDTO> findByNomOrGenreOrMatricule(String query , String genre);
     void delete(Long id);
 
     Optional<StudentDTO> findOne(Long id);
