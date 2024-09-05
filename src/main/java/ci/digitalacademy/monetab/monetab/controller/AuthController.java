@@ -25,13 +25,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthController {
-    @Autowired
+
     private final UserService userService;
 
-    @Autowired
+
     private final SchoolService schoolService;
 
-    @Autowired
+
     private final AppSettingService appSettingService;
 
     @GetMapping

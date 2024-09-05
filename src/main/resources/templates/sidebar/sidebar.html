@@ -37,10 +37,11 @@
                 </li>
             </ul>
             <div class="mt-5">
-                <hr>
-                <a class="text-decoration-none text-dark ps-2" th:href="@{/login}">
-                    <img src="/img/log-out_10024225.png" alt=""> Déconnexion
-                </a>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="btn btn-danger">
+                          <img src="/img/log-out_10024225.png" alt=""> Déconnexion
+                  </button>
+                </form>
             </div>
         </div>
     </div>

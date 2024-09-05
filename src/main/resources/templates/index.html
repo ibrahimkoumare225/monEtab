@@ -11,14 +11,14 @@
       <div class="login-box">
         <img src="/img/pied-piper.jpg" alt="Logo" class="logo">
         <h2>Mon Etab</h2>
-        <form action="#">
+        <form th:action="@{/index}" method="post">
           <div class="input-group">
             <input type="text" id="username" name="username" placeholder="Identifiant">
           </div>
           <div class="input-group">
             <input type="password" id="password" name="password" placeholder="Mot de passe">
           </div>
-          <button type="submit" class="login-button"><a th:href="@{/home}" >Connexion</a></button>
+          <button type="submit" class="login-button">Connexion</button>
         </form>
       </div>
     </div>

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -22,7 +23,7 @@ public class SecurityConfiguration {
                         .dispatcherTypeMatchers(DispatcherType.FORWARD, DispatcherType.ERROR).permitAll()  // Autoriser les types de requêtes FORWARD et ERROR
                         .requestMatchers("/css/**").permitAll()  // Permettre l'accès aux ressources css
                         .requestMatchers("/js/").permitAll()  // Permettre l'accès aux ressources js
-                        .requestMatchers("/**").permitAll()  // Autoriser l'accès au point de terminaison /app-setting
+                        //.requestMatchers("/**").permitAll()  // Autoriser l'accès au point de terminaison /app-setting
                         .requestMatchers("/school").permitAll()  // Autoriser l'accès au point de terminaison /app-setting
                         .requestMatchers("/settings").permitAll()  // Autoriser l'accès au point de terminaison /school-setting
                         .requestMatchers("/img/**").permitAll()  // Permettre l'accès aux ressources images
@@ -43,6 +44,9 @@ public class SecurityConfiguration {
         );
 
         return http.build();
-
+    }
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }

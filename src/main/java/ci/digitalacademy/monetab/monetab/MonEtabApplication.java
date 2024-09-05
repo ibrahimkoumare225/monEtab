@@ -4,19 +4,22 @@ import ci.digitalacademy.monetab.monetab.models.*;
 import ci.digitalacademy.monetab.monetab.repositories.AppSettingRepositories;
 import ci.digitalacademy.monetab.monetab.services.*;
 import ci.digitalacademy.monetab.monetab.services.dto.*;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.time.Instant;
 import java.util.*;
 
-
+@RequiredArgsConstructor
 @SpringBootApplication
 public class MonEtabApplication implements CommandLineRunner {
 
-
+	private final BCryptPasswordEncoder passwordEncoder;
+	private  final UserService userService;
 	public static void main(String[] args) {
 		SpringApplication.run(MonEtabApplication.class, args);
 	}
@@ -25,6 +28,23 @@ public class MonEtabApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		UserDTO user1 = new UserDTO();
+		user1.setPseudo("ikouma");
+		String password = passwordEncoder.encode("ikouma");
+		user1.setCreatedDate(Instant.now());
+		user1.setPassword(password);
+
+		UserDTO user2 = new UserDTO();
+		user2.setPseudo("ibarhim");
+		user2.setCreatedDate(Instant.now());
+		String password2 = passwordEncoder.encode("Koumare@");
+		user2.setPassword(password2);
+
+		userService.save(user1);
+		userService.save(user2);
+
+
 		/*
 		RoleUserDTO role1 = new RoleUserDTO();
 		role1.setRole("admin");

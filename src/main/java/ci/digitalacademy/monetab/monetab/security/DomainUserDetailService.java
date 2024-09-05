@@ -24,7 +24,7 @@ public class DomainUserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(String pseudo)  {
 
         final Optional<User> user = userRepository.findByPseudo(pseudo);
-        if (user.isPresent()){
+        if (!user.isPresent()){
             throw new IllegalArgumentException("User not found");
         }
         final List<GrantedAuthority> grantedAuthorities = user.get()
