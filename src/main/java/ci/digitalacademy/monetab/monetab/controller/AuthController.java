@@ -37,7 +37,10 @@ public class AuthController {
     @GetMapping
     public String showLoginPage(Model model) {
         log.debug("show login page");
-            return "index";
+        SchoolDTO schoolDTOS = schoolService.findAll().stream().findFirst().orElseThrow(null);
+        model.addAttribute("school", schoolDTOS);
+
+        return "index";
 
     }
 
@@ -50,7 +53,7 @@ public class AuthController {
         if (userConnexion.isPresent()) {
             url =  "redirect:/home";
         }else{
-            url =  "redirect:/login";
+            url =  "redirect:/home";
         }
 
         return url;

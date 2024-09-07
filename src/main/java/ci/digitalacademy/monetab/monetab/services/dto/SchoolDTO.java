@@ -9,7 +9,7 @@ public class SchoolDTO {
 
     private Long id;
     private String nameSchool;
-    private String url_logo;
+    private String urlLogo;
 
     private AppSettingDTO appSetting;
 }

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +29,7 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Sidebar -->
-    <div th:replace="sidebar/sidebar ::sidebar"></div>
+    <div th:replace="sidebar/sidebar::sideBar"></div>
 
     <!-- Tableau de bord -->
     <div class="col-md-10">

@@ -32,7 +32,7 @@ public class SecurityConfiguration {
                 )
                 .formLogin((login) -> login
                         .loginPage("/index").permitAll()  // Autoriser l'accès à la page de connexion pour tout le monde
-                        .defaultSuccessUrl("/home", true)  // Rediriger vers /home après une connexion réussie
+                        .defaultSuccessUrl("/", true)  // Rediriger vers /home après une connexion réussie
                         .failureUrl("/index?error=true")  // Rediriger vers la page de connexion avec une erreur en cas d'échec
             )
             .logout((logout) -> logout

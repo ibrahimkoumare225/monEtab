@@ -10,7 +10,7 @@
     <body>
     <div class="container-fluid">
         <div class="row">
-            <div th:replace="sidebar/sidebar :: sidebar"></div>
+            <div th:replace="sidebar/sidebar :: sideBar"></div>
             <div class="col-md-9">
                 <ul class="header-list">
                     <li>
@@ -34,7 +34,7 @@
                         <tbody>
                         <tr th:each="user:${users}" class="tr1">
                             <td th:text="${user.getPseudo()}"></td>
-                            <td th:text="${user.getCreationdate()}"></td>
+                            <td th:text="${user.getCreatedDate()}"></td>
                             <td>
                                 <button class="btn btn-warning"><a class="text-decoration-none" th:href="@{/user/{id}(id=${user.id})}">Modifier</a></button>
                                 <form th:action="@{/deleteUser/{id}(id=${user.id})}" method="post" style="display:inline;">

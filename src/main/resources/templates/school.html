@@ -70,14 +70,14 @@
 <body>
 <div class="form-container">
     <h2>Infos école</h2>
-    <form th:action="@{/school}" th:object="${school}" method="post">
+    <form th:action="@{/school}" th:object="${school}" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="name">Nom :</label>
-            <input  th:field="*{nameSchool}" type="text" id="name" name="name" required>
+            <label for="nameSchool">Nom :</label>
+            <input  th:field="*{nameSchool}" type="text" id="nameSchool" name="nameSchool" required>
         </div>
         <div class="form-group">
-            <label for="url">URL :</label>
-            <input th:field="*{url_logo}" type="url" id="url" name="url" required>
+            <label for="file">URL :</label>
+            <input th:field="*{file}" type="file" id="file" class="form-control" placeholder="file" aria-label="URL LOGO">
         </div>
         <div class="form-group">
             <button type="submit">Envoyer</button>

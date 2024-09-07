@@ -31,15 +31,12 @@ public class Indexcontroller {
         }else if(schools.isEmpty()) {
             return "redirect:/schools";
         }else{
-            return "redirect:/login";
+            return "redirect:/home";
         }
 
 
     }
-    @GetMapping("/sidebar")
-    public String sidebar() {
-        return "sidebar";
-    }
+
 
 
 

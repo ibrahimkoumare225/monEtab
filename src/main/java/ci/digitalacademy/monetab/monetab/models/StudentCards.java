@@ -17,7 +17,7 @@ import java.time.Instant;
 public class StudentCards {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
 
     private String reference;

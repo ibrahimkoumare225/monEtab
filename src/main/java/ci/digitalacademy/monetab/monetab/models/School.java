@@ -17,16 +17,14 @@ import java.util.Set;
 public class School {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "nameSchool",nullable = false)
     private String nameSchool;
 
     @Column(name = "url_logo",nullable = false)
-    private String url_logo;
+    private String urlLogo;
 
-    @ManyToOne
-    private School school;
 
     @OneToOne
     private AppSetting appSetting;

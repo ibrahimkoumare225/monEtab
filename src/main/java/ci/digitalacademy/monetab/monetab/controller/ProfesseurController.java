@@ -27,6 +27,7 @@ public class ProfesseurController {
     @GetMapping("/homeProfesseur")
     public String homePage(Model model) {
         List<ProfesseurDTO> professeurs = professeurService.findAll();
+
         model.addAttribute("professeurs", professeurs);
         return "dynamic/professeur/homeProfesseur";
     }

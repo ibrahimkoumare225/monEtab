@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class AppSetting implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
     @Column(name = "smtp_server")
     private String smtpServer;
@@ -28,6 +28,6 @@ public class AppSetting implements Serializable {
     @Column(name = "smtp_Password")
     private String smtpPassword;
 
-    @OneToOne(mappedBy = "appSetting", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "appSetting")
     private School school;
 }

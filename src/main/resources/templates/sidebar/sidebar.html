@@ -1,38 +1,53 @@
 <!doctype html>
-    <html lang="en">
-    <head>
-    </head>
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+>
     <body>
-    <div th:fragment="sidebar" class="col-md-2 bg-light">
+    <div th:fragment="sideBar" class="col-md-2 bg-light">
         <div class="d-flex flex-column align-items-start p-3">
             <h4 class="mb-4">
-                <img src="/img/pied-piper.jpg" alt="">Mon Etab
+
+                    <img th:if="${school == null}" ${src="/img/pied-piper.jpg"} alt="">
+                    <h2 th:text="${school.nameSchool}" th:if="${school != null}" th:src="${school.urlLogo}">
+
+                    </h2>
             </h4>
             <ul class="nav flex-column w-100">
                 <hr>
-                <li class="nav-item mb-3">
+                <li class="nav-item mb-2">
                     <a class="nav-link active text-dark ps-2" th:href="@{/home}">
                         <img src="/img/mood-board_11102281.png" alt=""> Dashboard
                     </a>
                 </li>
-                <li class="nav-item mb-3">
+                <li class="nav-item mb-2">
                     <a class="nav-link text-dark ps-2" th:href="@{/homeEleve}">
-                        <img src="/img/student_8289414.png" alt=""> Élèves
+                        <img src="/img/student_8289414.png" alt=""> Students
                     </a>
                 </li>
-                <li class="nav-item mb-3">
+                <li class="nav-item mb-2">
                     <a class="nav-link text-dark ps-2" th:href="@{/homeProfesseur}">
-                        <img src="/img/teacher_3373447.png" alt=""> Professeurs
+                        <img src="/img/teacher_3373447.png" alt=""> Teachers
                     </a>
                 </li>
-                <li class="nav-item mb-3">
+                <li class="nav-item mb-2">
                     <a class="nav-link text-dark ps-2" th:href="@{/homeUser}">
-                        <img src="/img/person_10109804.png" alt=""> Utilisateurs
+                        <img src="/img/person_10109804.png" alt=""> Users
                     </a>
                 </li>
-                <li class="nav-item mb-3">
+                <li class="nav-item mb-2">
                     <a class="nav-link text-dark ps-2" th:href="@{/rapport}">
                         <img src="/img/file_7429072.png" alt=""> Rapport
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark ps-2" th:href="@{/school}">
+                        <img src="/img/education_6008250.png" alt="">Schools
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark ps-2" th:href="@{/settings}">
+                        <img src="/img/gear_850768%20.png" alt=""> Setttings
                     </a>
                 </li>
             </ul>

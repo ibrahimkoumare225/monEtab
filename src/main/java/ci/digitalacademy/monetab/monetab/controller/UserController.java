@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.User;
+import ci.digitalacademy.monetab.monetab.services.SchoolService;
 import ci.digitalacademy.monetab.monetab.services.UserService;
 import ci.digitalacademy.monetab.monetab.services.dto.UserDTO;
 import lombok.RequiredArgsConstructor;

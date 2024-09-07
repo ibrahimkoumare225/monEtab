@@ -45,7 +45,7 @@ public class SchoolServiceImpl implements SchoolService {
     public SchoolDTO update(SchoolDTO schoolDTO) {
         return findOne(schoolDTO.getId()).map(existingSchool ->{
             existingSchool.setNameSchool(schoolDTO.getNameSchool());
-            existingSchool.setUrl_logo(schoolDTO.getUrl_logo());
+            existingSchool.setUrlLogo(schoolDTO.getUrlLogo());
             return save(schoolDTO);
         }).orElseThrow(()-> new IllegalArgumentException());
 

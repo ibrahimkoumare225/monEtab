@@ -1,6 +1,7 @@
 package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.Student;
+import ci.digitalacademy.monetab.monetab.services.SchoolService;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
 import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,6 @@ import java.util.Optional;
 public class StudentController {
 
     private final StudentService studentService;
-
     @GetMapping("/homeEleve")
     public String homeStudent(Model model){
         List<StudentDTO> students = studentService.findAll();

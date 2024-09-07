@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,7 @@ public class SchoolController {
     private final UserService userService;
 
     private final RoleUserService roleUserService;
+    private  final FileStorageService fileStorageService;
 
 
     @GetMapping
@@ -40,10 +42,13 @@ public class SchoolController {
     }
 
     @PostMapping
-    public String saveSchool(@ModelAttribute RegistrationSchoolDTO schoolDTO) {
-        AppSettingDTO appSettingDTO = appSettingService.findAll().get(0);
-        appService.initSchool(schoolDTO , appSettingDTO);
-
+    public String saveSchool(@ModelAttribute RegistrationSchoolDTO registrationSchoolDTO) throws IOException {
+        String upload = fileStorageService.upload(registrationSchoolDTO.getFile());
+        AppSettingDTO appSettingDTO = appSettingService.findAll().stream().findFirst().orElse(null);
+        registrationSchoolDTO.setUrlLogo(upload);
+        SchoolDTO save = schoolService.save(registrationSchoolDTO);
+        return "redirect:/home";
+    /*
         RoleUserDTO roleUserDTO = new RoleUserDTO();
         roleUserDTO.setNameRole("ADMIN");
 
@@ -51,7 +56,7 @@ public class SchoolController {
         userService.initUser(createUser());
 
         return "redirect:/login";
-
+*/
     }
 
     public List<RoleUserDTO> createRoleUser(){
