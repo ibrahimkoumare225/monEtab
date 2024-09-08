@@ -1,7 +1,6 @@
 package ci.digitalacademy.monetab.monetab.controller;
 
 import ci.digitalacademy.monetab.monetab.models.Student;
-import ci.digitalacademy.monetab.monetab.services.SchoolService;
 import ci.digitalacademy.monetab.monetab.services.StudentService;
 import ci.digitalacademy.monetab.monetab.services.dto.StudentDTO;
 import lombok.RequiredArgsConstructor;
@@ -10,8 +9,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.List;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Font;
+import com.lowagie.text.Phrase;
+import com.lowagie.text.Table;
+import com.lowagie.text.pdf.PdfWriter;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.List;;
 import java.util.Optional;
 
 @Slf4j
@@ -72,5 +83,48 @@ public class StudentController {
         redirectAttributes.addFlashAttribute("message", "Student deleted successfully!");
         return "redirect:/homeEleve";
     }
-
+//
+//    @GetMapping("/download-pdf")
+//    public ResponseEntity<byte[]> downloadPdf(HttpServletResponse response) throws DocumentException, IOException {
+//        // Récupération de la liste des étudiants
+//        List<StudentDTO> students = studentService.findAll();
+//
+//        // Création du document PDF
+//        Document document = new Document();
+//        ByteArrayOutputStream out = new ByteArrayOutputStream();
+//        PdfWriter.getInstance(document, out);
+//        document.open();
+//
+//        // Ajout de titre
+//        Font fontTitle = new Font(Font.HELVETICA, 18, Font.BOLD);
+//        document.add(new Phrase("Liste des étudiants", fontTitle));
+//        document.add(new Phrase("\n\n"));
+//
+//        // Création d'une table pour les étudiants
+//        Table table = new Table(3);  // 3 colonnes : ID, Nom, Email
+//        table.setWidth(100);
+//        table.setPadding(3);
+//        table.addCell("ID");
+//        table.addCell("Nom");
+//        table.addCell("Email");
+//
+//        // Remplissage de la table avec les données des étudiants
+//        for (StudentDTO student : students) {
+//            table.addCell(String.valueOf(student.getId()));
+//            table.addCell(student.getName());
+//            table.addCell(student.getEmail());
+//        }
+//
+//        document.add(table);
+//        document.close();
+//
+//        // Préparer la réponse HTTP avec le fichier PDF
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.APPLICATION_PDF);
+//        headers.setContentDispositionFormData("attachment", "students.pdf");
+//
+//        return ResponseEntity.ok()
+//                .headers(headers)
+//                .body(out.toByteArray());
+//    }
 }

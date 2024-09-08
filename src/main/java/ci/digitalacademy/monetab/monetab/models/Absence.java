@@ -17,9 +17,9 @@ public class Absence {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Instant absence_date;
+    private Instant absenceDate;
 
-    private int absence_number;
+    private int absenceNumber;
 
     @ManyToOne
     @JoinColumn(name = "student_id")

@@ -1,5 +1,7 @@
 package ci.digitalacademy.monetab.monetab.services.dto;
 
+import ci.digitalacademy.monetab.monetab.models.Address;
+import ci.digitalacademy.monetab.monetab.models.User;
 import ci.digitalacademy.monetab.monetab.models.enumerates.Gender;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +11,7 @@ import lombok.Setter;
 public class PersonneDTO {
 
     private Long id;
+
     private String nom;
 
     private String prenom;
@@ -17,7 +20,11 @@ public class PersonneDTO {
 
     private Gender genre;
 
-    private String ville;
+    String urlPicture;
 
-    private Long age;
+    private String birthday;
+
+    private Address address;
+
+    private User user;
 }

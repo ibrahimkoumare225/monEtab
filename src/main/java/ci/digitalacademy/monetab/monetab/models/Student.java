@@ -13,10 +13,8 @@ import java.util.Set;
 @Entity(name="student")
 public class Student extends Personne{
 
-    @Column(name = "classe",nullable = false)
-    private String classe;
+    private String phoneNumberFather;
 
-    @Column(name = "matricule",nullable = false,unique = true)
     private String matricule;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)

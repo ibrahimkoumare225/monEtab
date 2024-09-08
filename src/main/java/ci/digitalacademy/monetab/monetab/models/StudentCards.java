@@ -22,11 +22,11 @@ public class StudentCards {
 
     private String reference;
 
-    private String issue_date;
+    private String issueDate;
 
-    private Instant expiration_date;
+    private Instant expirationDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Student student;
 
 }

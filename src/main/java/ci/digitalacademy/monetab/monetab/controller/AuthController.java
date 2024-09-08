@@ -53,7 +53,7 @@ public class AuthController {
         if (userConnexion.isPresent()) {
             url =  "redirect:/home";
         }else{
-            url =  "redirect:/home";
+            url =  "redirect:/login";
         }
 
         return url;

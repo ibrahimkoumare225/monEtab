@@ -31,16 +31,16 @@ public abstract class Personne {
     @Enumerated(EnumType.STRING)
     private Gender genre;
 
-    @Column(name="city",nullable = false)
-    private String ville;
+    @Column(name="photo")
+    String urlPicture;
 
-    @Column(name="age",nullable = false)
-    private Long age;
+    @Column(name="birthday",nullable = false)
+    private String birthday;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private  Address address;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
 }

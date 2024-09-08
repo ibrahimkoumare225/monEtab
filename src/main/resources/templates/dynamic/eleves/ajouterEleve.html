@@ -22,27 +22,16 @@
                                 </button>
                             </li>
                         </ul>
-                    <div class="center">
-                        <form th:object="${student}" th:action="@{/homeEleve}" method="post">
-                            <h1 th:text="${student.id == null}?'Ajouter élève':'Modifier élève'"></h1>
+                        <h1 class="text-3xl font-bold text-gray-800 mb-6" th:text="${student.id == null}?'Ajouter élève':'Modifier élève'"></h1>
+                        <div class="center">
+                        <form class="bg-white p-6 rounded-lg shadow-md" th:object="${student}" th:action="@{/homeEleve}" method="post">
 
                             <input th:field="*{id}" hidden type="text">
                             <div class="form-group">
                                 <input th:field="*{nom}" type="text" id="nom" name="nom" placeholder="Nom"><br>
                                 <input th:field="*{prenom}" type="text" id="prenom" name="prenom" placeholder="Prenom">
                             </div>
-                            <div class="form-group">
-                                <label for="classe">Sélectionner une classe</label>
-                                <select th:field="*{classe}" id="classe" name="classe">
-                                    <option value="Tle">Tle</option>
-                                    <option value="1ère">1ère</option>
-                                    <option value="2nd">2nd</option>
-                                    <option value="3ème">3ème</option>
-                                    <option value="4ème">4ème</option>
-                                    <option value="5ème">5ème</option>
-                                    <option value="6ème">6ème</option>
-                                </select>
-                            </div>
+
                             <div class="gender-selection">
                                 <label for="MAN">
                                     <input th:field="*{genre}" type="radio" id="MAN" name="genre" value="MAN">
@@ -57,19 +46,19 @@
                                     WOMAN
                                 </label>
                             </div>
+
                             <div class="form-group">
                                 <input th:field="*{telephone}" type="text" id="telephone" name="telephone" placeholder="Téléphone">
+                            </div>
+                            <div class="form-group">
+                                <input th:field="*{address.city}" type="text" placeholder="Ville "  value="true">
                             </div>
                             <div class="form-group">
 
                                 <input th:field="*{matricule}" type="text" id="true" placeholder="Matricule" value="true">
                             </div>
                             <div class="form-group">
-                                <input th:field="*{ville}" type="text" id="ville" name="ville" placeholder="Ville">
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Date de naissance</label>
-                                <input th:field="*{age}" type="number" id="date" name="date">
+                                <input th:field="*{birthday}" type="date" id="birthday" name="birthday">
                             </div>
                             <div class="form-actions">
                                 <button type="button" class="btn-cancel">Annuler</button>
@@ -83,3 +72,4 @@
     </div>
     </body>
 </html>
+

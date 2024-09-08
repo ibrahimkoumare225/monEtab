@@ -41,7 +41,6 @@
                         <th>Vacant</th>
                         <th>Âge</th>
                         <th>Téléphone</th>
-                        <th>Ville</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -51,9 +50,8 @@
                         <td th:text="${professeur.getPrenom()}"></td>
                         <td th:text="${professeur.getMatiere()}"></td>
                         <td th:text="${professeur.getVacant()}"></td>
-                        <td th:text="${professeur.getAge()}"></td>
+                        <td th:text="${professeur.getBirthday()}"></td>
                         <td th:text="${professeur.getTelephone()}"></td>
-                        <td th:text="${professeur.getVille()}"></td>
                         <td>
                             <button class="btn btn-warning">
                                 <a class="text-decoration-none" th:href="@{/{id}(id=${professeur.id})}">Modifier</a>

@@ -10,9 +10,9 @@ import java.util.Set;
 @Setter
 public class StudentDTO extends PersonneDTO{
 
-    private String classe;
+    private String phoneNumberFather;
 
     private String matricule;
 
-    private Set<AbsenceDTO> absences;
+    private Set<Absence> absences;
 }

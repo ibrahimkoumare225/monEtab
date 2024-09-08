@@ -41,24 +41,22 @@
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Genre</th>
-                    <th>Classe</th>
+                    <th>Adresse</th>
                     <th>Matricule</th>
-                    <th>Âge</th>
+                    <th>Birthday</th>
                     <th>Téléphone</th>
-                    <th>Ville</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="student , status : ${students}">
-                    <td th:text="${student.getNom()}"></td>
-                    <td th:text="${student.getPrenom()}"></td>
+                <tr th:each="student : ${students}">
+                    <td th:text="${student.nom}"></td>
+                    <td th:text="${student.prenom}"></td>
                     <td th:text="${student.genre}"></td>
-                    <td th:text="${student.getClasse()}"></td>
-                    <td th:text="${student.getMatricule()}"></td>
-                    <td th:text="${student.getAge()}"></td>
-                    <td th:text="${student.getTelephone()}">0123456789</td>
-                    <td th:text="${student.getVille()}">Bonoua</td>
+                    <td th:text="${student.address.city}"></td>
+                    <td th:text="${student.matricule}"></td>
+                    <td th:text="${student.birthday}"></td>
+                    <td th:text="${student.telephone}"></td>
                     <td>
                         <button class="btn btn-warning ">
                             <a class="text-decoration-none" th:href="@{/student/{id}(id=${student.id})}">Modifier</a>

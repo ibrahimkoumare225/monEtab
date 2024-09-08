@@ -12,7 +12,7 @@ import java.time.Instant;
 public class AbsenceDTO {
     private Long id;
 
-    private Instant absence_date;
+    private Instant absenceDate;
 
-    private int absence_number;
+    private int absenceNumber;
 }

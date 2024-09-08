@@ -30,7 +30,7 @@ public class StudentCardsServiceImpl implements StudentCardsService {
     public StudentCardsDTO update(StudentCardsDTO studentCardsDTO) {
         log.debug("Request to upadte student{}",studentCardsDTO);
         return findOne(studentCardsDTO.getId()).map(existingStudentCardsDTO1->{
-            existingStudentCardsDTO1.setExpiration_date(studentCardsDTO.getExpiration_date());
+            existingStudentCardsDTO1.setExpirationDate(studentCardsDTO.getExpirationDate());
             existingStudentCardsDTO1.setReference(studentCardsDTO.getReference());
             return save(existingStudentCardsDTO1);
         }).orElseThrow(()->new IllegalArgumentException());

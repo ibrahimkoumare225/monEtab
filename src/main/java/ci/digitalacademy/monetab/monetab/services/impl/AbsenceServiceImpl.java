@@ -29,8 +29,8 @@ public class AbsenceServiceImpl implements AbsenceService {
     public AbsenceDTO update(AbsenceDTO absenceDTO) {
         log.debug("Request to upadte absenceDTO{}", absenceDTO);
         return findOne(absenceDTO.getId()).map(existingAbsence->{
-            existingAbsence.setAbsence_number(absenceDTO.getAbsence_number());
-            existingAbsence.setAbsence_date(absenceDTO.getAbsence_date());
+            existingAbsence.setAbsenceDate(absenceDTO.getAbsenceDate());
+            existingAbsence.setAbsenceNumber(absenceDTO.getAbsenceNumber());
             return save(existingAbsence);
         }).orElseThrow(()->new IllegalArgumentException());
     }

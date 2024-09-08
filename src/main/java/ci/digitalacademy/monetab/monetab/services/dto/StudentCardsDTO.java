@@ -1,8 +1,10 @@
 package ci.digitalacademy.monetab.monetab.services.dto;
 
+import ci.digitalacademy.monetab.monetab.models.Student;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Getter
@@ -12,7 +14,9 @@ public class StudentCardsDTO {
 
     private String reference;
 
-    private String issue_date;
+    private String issueDate;
 
-    private Date expiration_date;
+    private Instant expirationDate;
+
+    private Student student;
 }
