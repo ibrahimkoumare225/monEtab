@@ -29,20 +29,20 @@ public class MonEtabApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		UserDTO user1 = new UserDTO();
-		user1.setPseudo("ikouma");
-		String password = passwordEncoder.encode("ikouma");
-		user1.setCreatedDate(Instant.now());
-		user1.setPassword(password);
-
-		UserDTO user2 = new UserDTO();
-		user2.setPseudo("ibarhim");
-		user2.setCreatedDate(Instant.now());
-		String password2 = passwordEncoder.encode("Koumare@");
-		user2.setPassword(password2);
-
-		userService.save(user1);
-		userService.save(user2);
+//		UserDTO user1 = new UserDTO();
+//		user1.setPseudo("ikouma");
+//		String password = passwordEncoder.encode("ikouma");
+//		user1.setCreatedDate(Instant.now());
+//		user1.setPassword(password);
+//
+//		UserDTO user2 = new UserDTO();
+//		user2.setPseudo("ibarhim");
+//		user2.setCreatedDate(Instant.now());
+//		String password2 = passwordEncoder.encode("Koumare@");
+//		user2.setPassword(password2);
+//
+//		userService.save(user1);
+//		userService.save(user2);
 
 
 		/*

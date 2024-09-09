@@ -19,10 +19,12 @@
                               </select>
                           </div>
                           <div class="col-md-3  my-2">
-                              <button type="button" class="btn btn-danger btn-lg">Télécharger en PDF</button>
+                              <a th:href="@{/pdf}" class="btn btn-danger btn-lg">Télécharger en PDF
+                                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                           </div>
                           <div class="col-md-3  my-2">
-                              <button type="button" class="btn btn-success btn-lg">Télécharger en Excel</button>
+                              <a th:href="@{/excelExport}" class="btn btn-success btn-lg">Télécharger en Excel
+                                  <i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
                           </div>
 
           </div>
